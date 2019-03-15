@@ -1,17 +1,21 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import axios from "axios";
+  Vue.prototype.$axios = axios;
+
+
+
+
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    
   }
 }
 </script>

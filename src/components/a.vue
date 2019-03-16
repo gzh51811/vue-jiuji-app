@@ -1,16 +1,18 @@
 <template>
-  <div class="container">
-    <mt-tabbar v-model="selected">
-      <mt-tab-item  v-for="(nav,idx) in navs" :key="nav.name" :id="nav.nid" @click.native="change(idx,$event) "   :class="{active : active == idx}" ref='changeimg'>
-      <!-- 小图标 -->
-        <img slot="icon"  :src="nav.isok?nav.imgactive:nav.img">
-        <!-- <el-badge value="4" class="item" v-if="nav.name=='Cart'">
-            {{nav.text}}
-        </el-badge> -->
-        <span>{{nav.text}}</span>
-      </mt-tab-item>
-    </mt-tabbar>
-  </div>
+
+    <div class="container">
+ 
+        <mt-tabbar v-model="selected"  >
+          <mt-tab-item  v-for="(nav,idx) in navs" :key="nav.name" :id="nav.nid" @click.native="change(nav,idx,$event) "   :class="{active : active == idx}" ref='changeimg'>
+          <!-- 小图标 -->
+            <img slot="icon"  :src="nav.isok?nav.imgactive:nav.img">
+            <!-- <el-badge value="4" class="item" v-if="nav.name=='Cart'">
+                {{nav.text}}
+            </el-badge> -->
+            <span>{{nav.text}}</span>
+          </mt-tab-item>
+        </mt-tabbar>
+    </div>
 </template>
 
 <script>
@@ -18,7 +20,7 @@ import Vue from 'vue';
 import 'mint-ui/lib/style.css'
 export default {
     data(){
-         return {
+        return {
             navs:[{
                 nid:'tab1',
                 text:'首页',
@@ -30,7 +32,7 @@ export default {
             {
                 nid:'tab2',
                 text:'分类',
-                name:'List',
+                name:'Classify',
                 img:'https://img2.ch999img.com/newstatic/1381/bd97081045bc9e.png',
                 imgactive:'https://img2.ch999img.com/newstatic/1382/bd9717836a2719.png',
                 isok:false
@@ -38,7 +40,7 @@ export default {
             {
                 nid:'tab3',
                 text:'消息',
-                name:'Goods',
+                name:'Message',
                 img:'https://img2.ch999img.com/newstatic/1377/bd9722f5aec894.png',
                 imgactive:'https://img2.ch999img.com/newstatic/1377/bd9722f5aec894.png',
                 isok:false
@@ -66,7 +68,7 @@ export default {
     },
      
     methods:{
-        change(index,e){    
+        change(nav,index,e){    
 
             
             // 点击切换样式
@@ -78,9 +80,16 @@ export default {
               i.isok=false
               return {...i}
              })
-             this.navs[index].isok = true
+             this.navs[index].isok = true;
+            // 路由跳转
+            this.$router.push({name:nav.name});
+            console.log(this.$router)
+             // this.$router.push({name:nav.name});
               
          }
+            // console.log('App:',this);
+            // this.$router.push({name:nav.name})
+            // this.$router.push({path:nav.path})      
     }
 }
 </script>
@@ -88,6 +97,7 @@ export default {
 <style scoped>
     .active{
         color:red !important;
+        background:#fff !important;
     }
     .container .mint-tabbar{
         background:#fff;

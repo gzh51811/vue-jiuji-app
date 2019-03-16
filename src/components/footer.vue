@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <mt-tabbar v-model="selected">
-      <mt-tab-item  v-for="(nav,idx) in navs" :key="nav.name" :id="idx" @click.native="change(idx)">
+      <mt-tab-item  v-for="(nav,idx) in navs" :key="nav.name" :id="idx" @click.native="change">
         <img slot="icon" :src="nav.img">
         <!-- <el-badge value="4" class="item" v-if="nav.name=='Cart'">
             {{nav.text}}
@@ -54,14 +54,9 @@ export default {
         }
     },
     methods:{
-        change(idx){         
-            // e.target.style.color = 'red';
-            console.log(idx);
+        change(e){         
+            e.target.style.color = 'red';
         },
-        changeclass(){
-            console.log(12345)
-            // addclass='active'
-        }
     }
 
 }

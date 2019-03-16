@@ -1,12 +1,12 @@
 <template>
-  <shouye></shouye>
+  <search></search>
 </template>
 
 <script>
-import shouye from './components/shouye.vue'
+import search from './components/search.vue'
 export default {
   components:{
-    shouye
+    search
   }
 }
 </script>

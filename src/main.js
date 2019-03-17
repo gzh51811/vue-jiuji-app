@@ -2,6 +2,12 @@ import Vue from 'vue'
 import MintUI from 'mint-ui'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import './css/index.css'
+
+
+
+
+
 import App from './App.vue'
 
 

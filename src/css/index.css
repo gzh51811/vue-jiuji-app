@@ -1,0 +1,77 @@
+*{
+    margin:0;
+    padding:0;
+}
+.g_head{
+    display: flex;
+    background: #fff;
+    color:#000;
+}
+.g_head .iback{
+    flex:.3;
+}
+.g_head .iback img{
+    width: 20px;
+    height: 45px; 
+}
+.g_head .inav{
+    flex:1.5;
+    font-size: 16px;
+}
+
+.g_head .imore{
+    flex:.3;
+    padding-right:10px;
+    text-align: right;
+}
+.g_head .imore img{
+    width: 20px;
+    height: 45px;
+}
+.flex {
+    display: -webkit-flex;
+    display: flex;
+}
+.swipe-btn{
+    width: 52px;
+    height: 22px;
+    line-height: 20px;
+    margin: 0 3px;
+}
+.swipe-btn{
+    font-size: 14px;
+}
+.btn-unselected{
+    width: 52.5px;
+    height: 22px;
+    border-radius: 28px;
+    background-color: hsla(0,0%,100%,.4);
+    border: .5px solid #dfdfdf;
+}
+.relative {
+    position: relative;
+}
+.play-btn-bg{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.btn-unselected .play-btn-bg{
+    display: none;
+}
+.product-swipe-page{
+    margin-left: 40px;
+    margin-top: -2px;
+}
+.product-swipe-page .page-box {
+    width: 54px;
+    height: 22px;
+    border-radius: 28px;
+    background-color: rgba(0,0,0,.4);
+    display: inline-block;
+    line-height: 21px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}

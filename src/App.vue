@@ -1,6 +1,6 @@
 <template>
   <div>
-      <shouye></shouye>
+      <!-- <shouye></shouye> -->
       <goods></goods>
   </div>
 </template>
@@ -10,7 +10,7 @@ import shouye from './components/shouye.vue'
 import goods from './pages/goods.vue'
 export default {
   components:{
-    shouye,
+    // shouye,
     goods
   }
 }

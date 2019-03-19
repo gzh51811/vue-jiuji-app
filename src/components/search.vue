@@ -24,7 +24,6 @@ export default {
             //  result:['3333','r']
          }
     }
-
 }
 </script>
 
@@ -35,7 +34,6 @@ export default {
     .mint-searchbar-inner,.mint-searchbar-core{
         background:darkred;
         border-radius: 25px;
-
     }
     .mint-searchbar-cancel{
         color:white;

@@ -1,12 +1,12 @@
 <template>
   <div class="container">
     <div class="g_head">
-      <i class="iback">
+      <i class="iback" @click="gobacklast">
         <img src="../assets/img/fenxiang.svg">
       </i>
       <mt-navbar v-model="selected" class="inav">
         <mt-tab-item id="1">
-          <span>登录</span>
+          <span>{{regorlog}}</span>
         </mt-tab-item>
       </mt-navbar>
       <i class="imore" @click="isshow=!isshow">
@@ -40,8 +40,22 @@ export default {
   data() {
     return {
       selected: [],
-      isshow: false
+      isshow: false,
+      regorlog: ""
     };
+  },
+  methods: {
+    gobacklast() {
+      history.go(-1);
+    }
+  },
+  beforeMount() {
+    // console.log(this.$route.name);
+    if (this.$route.name == "Login") {
+      this.regorlog = "登录";
+    } else if (this.$route.name == "register") {
+      this.regorlog = "注册";
+    }
   }
 };
 </script>

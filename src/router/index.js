@@ -5,7 +5,7 @@
  */
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-
+// import "../assets/css/index.css";
 
 import Home from '../pages/Home.vue'
 import List from '../pages/List.vue'
@@ -17,11 +17,19 @@ import Mine from '../pages/Mine.vue'
 // import NotFound from '../components/NotFound'
 import Login from '../pages/login.vue'
 import register from '../pages/register.vue'
+import setting from '../pages/setting.vue'
+
+import "../assets/font/iconfont.css"
+
+import axios from "axios";
+
+Vue.prototype.$axios = axios;
 
 Vue.use(VueRouter);
 
 let router = new VueRouter({
     // mode:'history',
+
     routes: [
         // 首页:当浏览器地址为path路径是时，自动渲染component对应组件
         {
@@ -72,6 +80,11 @@ let router = new VueRouter({
             name: 'register',
             path: '/register',
             component: register
+        },
+        {
+            name: 'setting',
+            path: '/setting',
+            component: setting
         }
 
     ]
@@ -88,7 +101,7 @@ router.beforeEach((to, from, next) => {
         if (username) {
             next();
         } else {
-            console.log('from:', to.fullPath)
+            // console.log('from:', to.fullPath)
             // 重定向到登录页面
             next({
                 name: 'Login',

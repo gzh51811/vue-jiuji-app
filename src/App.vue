@@ -3,14 +3,13 @@
 </template>
 
 <script>
-import shouye from './components/shouye.vue'
+import shouye from "./components/goodsclassify.vue";
 export default {
-  components:{
+  components: {
     shouye
   }
-}
+};
 </script>
 
 <style>
-
 </style>

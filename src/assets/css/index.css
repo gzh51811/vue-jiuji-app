@@ -1,8 +1,43 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.mint-tabbar{
-    border-top:1px  solid #ccc;
+
+.mint-tabbar {
+    border-top: 1px solid #ccc;
 }
 
+.g_head {
+    display: flex;
+    background: #fff;
+    color: #000;
+}
+
+.g_head .iback {
+    flex: .3;
+}
+
+.g_head .iback img {
+    width: 20px;
+    height: 45px;
+}
+
+.g_head .inav {
+    flex: 1.5;
+    font-size: 16px;
+}
+
+.g_head .imore {
+    flex: .3;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.g_head .imore img {
+    width: 20px;
+    height: 45px;
+}
+
+.mint-search {
+    height: 50px;
+}

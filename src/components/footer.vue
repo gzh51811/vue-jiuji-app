@@ -120,13 +120,6 @@ export default {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
-    .container .mint-tab-item-label span{
-        font-size:16px;
-    }
-    .active{
-        color: red;
-=======
     .active{
         color:red !important;
         background:#fff !important;
@@ -140,6 +133,5 @@ export default {
     }
     .tab-bar-box{
     border-top:1px  solid #000 !important;
->>>>>>> c8ded54db629206da20b846844a1c8e764d10f19
     }
 </style>

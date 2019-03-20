@@ -1,6 +1,6 @@
 <template>
   <div class="Listright">
-    <img class="imgTop" :src="type12[0].imgTop" alt>
+    <img class="imgTop" :src="type12[0].imgTop" alt @click="goto(1)">
     <div v-for="(item,idex) in type12" :key="idex">
       <div class="Listright1">
         <div>
@@ -9,7 +9,7 @@
             <span class="text2">{{item.text2}}</span>
           </div>
           <ul>
-            <li class="brand" v-for="(item1,idx) in item.img1" :key="idx">
+            <li class="brand" v-for="(item1,idx) in item.img1" :key="idx" @click="goto(idx)">
               <img v-lazy="item1" alt>
               <p>{{item.brand[idx]}}</p>
             </li>
@@ -132,6 +132,16 @@ export default {
         // }
       ]
     };
+  },
+  methods: {
+    goto(id) {
+      if (id % 2 == 0) {
+        id = 1;
+      } else {
+        id = 2;
+      }
+      this.$router.push({ path: "list/" + id });
+    }
   }
 };
 </script>

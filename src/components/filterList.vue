@@ -1,5 +1,5 @@
 <template>
-  <div id="filterList">
+  <div id="searchBar" class="searchBar">
     <div data-v-40e81ac4 data-v-42930b63 class="sort sticky">
       <!---->
       <div
@@ -137,10 +137,10 @@
                 data-v-42930b63
                 data-v-40e81ac4
                 data-coll="2-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0_0"
-                class="sort-option-item flex flex-align-center flex-justify-between cur"
+                class="sort-option-item flex flex-align-center flex-justify-between"
                 @click="change6(1)"
               >
-                <p data-v-42930b63 data-v-40e81ac4>苹果</p>
+                <p data-v-42930b63 data-v-40e81ac4 :class="{focss:g[1]}">苹果</p>
                 <i
                   data-v-42930b63
                   data-v-40e81ac4
@@ -155,7 +155,7 @@
                 class="sort-option-item flex flex-align-center flex-justify-between"
                 @click="change6(2)"
               >
-                <p data-v-42930b63 data-v-40e81ac4>华为</p>
+                <p data-v-42930b63 data-v-40e81ac4 :class="{focss:g[2]}">华为</p>
                 <i
                   data-v-42930b63
                   data-v-40e81ac4
@@ -170,7 +170,7 @@
                 class="sort-option-item flex flex-align-center flex-justify-between"
                 @click="change6(3)"
               >
-                <p data-v-42930b63 data-v-40e81ac4>荣耀</p>
+                <p data-v-42930b63 data-v-40e81ac4 :class="{focss:g[3]}">荣耀</p>
                 <i
                   data-v-42930b63
                   data-v-40e81ac4
@@ -185,7 +185,7 @@
                 class="sort-option-item flex flex-align-center flex-justify-between"
                 @click="change6(4)"
               >
-                <p data-v-42930b63 data-v-40e81ac4>小米</p>
+                <p data-v-42930b63 data-v-40e81ac4 :class="{focss:g[4]}">小米</p>
                 <i
                   data-v-42930b63
                   data-v-40e81ac4
@@ -201,7 +201,7 @@
                 class="sort-option-item flex flex-align-center flex-justify-between"
                 @click="change6(5)"
               >
-                <p data-v-42930b63 data-v-40e81ac4>OPPO</p>
+                <p data-v-42930b63 data-v-40e81ac4 :class="{focss:g[5]}">OPPO</p>
                 <i
                   data-v-42930b63
                   data-v-40e81ac4
@@ -217,7 +217,7 @@
                 class="sort-option-item flex flex-align-center flex-justify-between"
                 @click="change6(6)"
               >
-                <p data-v-42930b63 data-v-40e81ac4>vivo</p>
+                <p data-v-42930b63 data-v-40e81ac4 :class="{focss:g[6]}">vivo</p>
                 <i
                   data-v-42930b63
                   data-v-40e81ac4
@@ -233,7 +233,7 @@
                 class="sort-option-item flex flex-align-center flex-justify-between"
                 @click="change6(7)"
               >
-                <p data-v-42930b63 data-v-40e81ac4>三星</p>
+                <p data-v-42930b63 data-v-40e81ac4 :class="{focss:g[7]}">三星</p>
                 <i
                   data-v-42930b63
                   data-v-40e81ac4
@@ -248,7 +248,7 @@
                 class="sort-option-item flex flex-align-center flex-justify-between"
                 @click="change6(8)"
               >
-                <p data-v-42930b63 data-v-40e81ac4>魅族</p>
+                <p data-v-42930b63 data-v-40e81ac4 :class="{focss:g[8]}">魅族</p>
                 <i
                   data-v-42930b63
                   data-v-40e81ac4
@@ -263,7 +263,7 @@
                 class="sort-option-item flex flex-align-center flex-justify-between"
                 @click="change6(9)"
               >
-                <p data-v-42930b63 data-v-40e81ac4>美图手机</p>
+                <p data-v-42930b63 data-v-40e81ac4 :class="{focss:g[9]}">美图手机</p>
                 <i
                   data-v-42930b63
                   data-v-40e81ac4
@@ -278,7 +278,7 @@
                 class="sort-option-item flex flex-align-center flex-justify-between"
                 @click="change6(10)"
               >
-                <p data-v-42930b63 data-v-40e81ac4>其他</p>
+                <p data-v-42930b63 data-v-40e81ac4 :class="{focss:g[10]}">其他</p>
                 <i
                   data-v-42930b63
                   data-v-40e81ac4
@@ -307,7 +307,7 @@
           <!---->
           <!---->
         </div>
-        <div data-v-42930b63 data-v-40e81ac4 class="fast-sort-item">
+        <div data-v-42930b63 data-v-40e81ac4 class="fast-sort-item" @click="change5">
           <div
             @click="changeIdx2_2"
             data-v-42930b63
@@ -326,7 +326,7 @@
           <!---->
           <!---->
         </div>
-        <div data-v-42930b63 data-v-40e81ac4 class="fast-sort-item">
+        <div data-v-42930b63 data-v-40e81ac4 class="fast-sort-item" @click="change5">
           <div
             @click="changeIdx2_3"
             data-v-42930b63
@@ -345,7 +345,7 @@
           <!---->
           <!---->
         </div>
-        <div data-v-42930b63 data-v-40e81ac4 class="fast-sort-item">
+        <div data-v-42930b63 data-v-40e81ac4 class="fast-sort-item" @click="change5">
           <div
             @click="changeIdx2_4"
             data-v-42930b63
@@ -387,7 +387,6 @@ import Vue from "vue";
 import "mint-ui/lib/style.css";
 import { Popup } from "mint-ui";
 import { constants } from "fs";
-
 Vue.component(Popup.name, Popup);
 export default {
   data() {
@@ -428,6 +427,46 @@ export default {
       this.a0 = true;
     },
     change1() {
+      var { id } = this.$route.params;
+      if (this.idx2 == "1") {
+        if (!this.idx1) {
+          if (this.g[1] && this.g[2]) {
+            var status = "xuanzheiw";
+          } else if (this.g[1] && !this.g[2]) {
+            var status = "xuanzhei";
+          } else if (!this.g[1] && this.g[2]) {
+            var status = "xuanzhew";
+          } else {
+            return;
+          }
+        } else {
+          if (this.g[1] && this.g[2]) {
+            var status = "xuanzheiws";
+          } else if (this.g[1] && !this.g[2]) {
+            var status = "xuanzheis";
+          } else if (!this.g[1] && this.g[2]) {
+            var status = "xuanzhews";
+          } else {
+            return;
+          }
+        }
+      } else {
+        if (this.idx1) {
+          var status = "jiagebig";
+        } else {
+          var status = "jiagesmall";
+        }
+      }
+      this.$axios
+        .get("http://localhost:5201/src/api/goodslist.php", {
+          params: {
+            id,
+            status
+          }
+        })
+        .then(res => {
+          this.$emit("update:goodschange", res.data);
+        });
       this.idx = 1;
       this.idx1 = !this.idx1;
     },
@@ -450,6 +489,46 @@ export default {
     },
     change5() {
       this.idx4 = 0;
+      var { id } = this.$route.params;
+      if (this.idx2 == "1") {
+        if (!this.idx1) {
+          if (this.g[1] && this.g[2]) {
+            var status = "xuanzheiw";
+          } else if (this.g[1] && !this.g[2]) {
+            var status = "xuanzhei";
+          } else if (!this.g[1] && this.g[2]) {
+            var status = "xuanzhew";
+          } else {
+            return;
+          }
+        } else {
+          if (this.g[1] && this.g[2]) {
+            var status = "xuanzheiws";
+          } else if (this.g[1] && !this.g[2]) {
+            var status = "xuanzheis";
+          } else if (!this.g[1] && this.g[2]) {
+            var status = "xuanzhews";
+          } else {
+            return;
+          }
+        }
+      } else {
+        if (this.idx1) {
+          var status = "jiagebig";
+        } else {
+          var status = "jiagesmall";
+        }
+      }
+      this.$axios
+        .get("http://localhost:5201/src/api/goodslist.php", {
+          params: {
+            id,
+            status
+          }
+        })
+        .then(res => {
+          this.$emit("update:goodschange", res.data);
+        });
     },
     change6(i) {
       this.g[i] = !this.g[i];
@@ -459,52 +538,55 @@ export default {
       let f = this.g.map(item => (item = false));
       this.g = f;
       this.$forceUpdate();
-      console.log(this.g);
     }
   }
 };
 </script>
 
 <style scoped>
-#filterList .active {
+#searchBar .active {
   display: none;
 }
-#filterList .s1 {
+#searchBar .s1 {
   transition: all 0.5s ease;
 }
-#filterList .s2 {
+#searchBar .s2 {
   transform-origin: 8px 8px;
   transform: rotate(180deg);
 }
-#filterList .s3 {
+#searchBar .s3 {
   transform-origin: 4px 5px;
   transform: rotate(180deg);
 }
-#filterList .s4 {
+#searchBar .s4 {
   display: block;
 }
 
-#filterList .clikcss {
+#searchBar .clikcss {
   font-weight: 500;
   color: #000;
 }
-#filterList .focss {
+#searchBar .focss {
   font-weight: 700;
   color: #f21c1c;
 }
-#filterList .check0 {
+#searchBar .check0 {
   display: none;
 }
 
-#filterList .check2 {
+#searchBar .check2 {
   color: #000;
 }
-#filterList .check1 {
+#searchBar .check1 {
   color: #f21c1c;
 }
-#filterList .focss2 {
+#searchBar .focss2 {
   border: 1px solid #f21c1c;
   background-color: #fff;
   color: #f21c1c;
+}
+#searchBar .fast-sort .sort-option[data-v-42930b63] {
+  top: 130px;
+  padding: 0;
 }
 </style>

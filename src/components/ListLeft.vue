@@ -171,7 +171,7 @@ export default {
 }
 .leftwrap {
   width: 120px;
-  height: 500px;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -197,12 +197,12 @@ li.current p {
 
 .leftwrap .content li p {
   padding-left: 10px;
-  line-height: 16px;
-  font-size: 12px;
+  line-height: 18px;
+  font-size: 14px;
 }
 .wrapper {
   width: 500px;
-  height: 500px;
+  height: 1000px;
   overflow: hidden;
 }
 
@@ -224,7 +224,7 @@ li.current p {
 }
 
 .wrapper .content li:last-of-type {
-  height: 600px;
+  height: 800px;
 }
 
 .content li {

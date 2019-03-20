@@ -1,8 +1,8 @@
 <template>
   <div id="search">
     <div>
-      <img class="img1" src="../assets/img/fenxiang.svg" alt>
-      <mt-search class="searchout" v-model="value" placeholder="搜索" cancel-text :show="true">
+      <img class="img1" src="../assets/img/fenxiang.svg" @click="goto">
+      <mt-search class="searchout" v-model="value" placeholder="搜索" cancel-text :show="false">
         <!-- :result.sync="result" -->
       </mt-search>
     </div>
@@ -31,12 +31,20 @@ export default {
   methods: {
     change() {
       this.idx = !this.idx;
+    },
+    goto() {
+      this.$router.push({ path: "/classify" });
     }
   }
 };
 </script>
 
 <style >
+#search {
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+}
 .mint-searchbar {
   background: white;
   width: 300px;
@@ -60,6 +68,7 @@ export default {
   width: 310px;
   padding: 0px;
   margin: 0px;
+  /* margin-right: 30px; */
 }
 .mint-searchbar {
   width: 310px;

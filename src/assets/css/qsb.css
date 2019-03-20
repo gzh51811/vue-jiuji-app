@@ -1725,7 +1725,7 @@ input:-webkit-autofill {
     }
 }
 
-.fa-rotate-90 {
+/* .fa-rotate-90 {
     -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg)
@@ -1753,7 +1753,7 @@ input:-webkit-autofill {
     -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
     -webkit-transform: scaleY(-1);
     transform: scaleY(-1)
-}
+} */
 
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical,

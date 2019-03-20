@@ -9,13 +9,13 @@ import VueRouter from 'vue-router';
 
 import Home from '../pages/Home.vue'
 import List from '../pages/List.vue'
-import Goods from '../pages/Goods.vue'
+import Goods from '../pages/goods.vue'
 import Classify from '../pages/Classify.vue'
 import Message from '../pages/Message.vue'
 import Cart from '../pages/Cart.vue'
 import Mine from '../pages/Mine.vue'
 // import NotFound from '../components/NotFound'
-import Login from '../pages/login.vue'
+import Login from '../pages/Login.vue'
 import register from '../pages/register.vue'
 import setting from '../pages/setting.vue'
 

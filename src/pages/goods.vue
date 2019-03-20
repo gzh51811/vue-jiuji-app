@@ -25,7 +25,7 @@
                 <div data-v-19b06535="" style="width: 54px;"></div>
                 <div data-v-19b06535="" class="flex flex-center">
                     <div data-v-19b06535="" v-for="(item,idx) in banselect" :key="idx" @click="switchCar(idx)" class="swipe-btn relative">                        
-                        <img data-v-19b06535="" :src="se_imgurl[1]" :class="{btnUnselected:!(currentred == idx)}"  style="top:-22px;" class="play-btn-bg absolute">
+                        <img data-v-19b06535="" :src="se_imgurl[1]" :class="{btnUnselected:!(currentred == idx)}"  class="play-btn-bg absolute">
                         <span data-v-19b06535="" class="play-btn-text relative font-10" :class="{active:currentred == idx}">{{item}}</span>
                     </div>
                 </div>
@@ -1531,7 +1531,7 @@ export default{
         //ajax获取数据
         this.$axios.get('http://localhost:5201/goods.php',{
             params:{
-                cid:"4",
+                cid:"3",
                 m:'init'
             }
         }).then(res =>{
@@ -1595,7 +1595,6 @@ export default{
 .play-btn-text.active{
     color:#fff;
     left: 2px;
-    top:-22px;
     border:none;
 }
 </style>

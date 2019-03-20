@@ -2,23 +2,35 @@
     <div class="container">
         
         <mytop></mytop>
-         
+        
 
         <div class="gcenter">
             <!-- 轮播图 -->
-            <div data-v-19b06535="" class="product-swipe relative" style="height: 349px;margin-top:50px;">
-                <mt-swipe :show-indicators="false" :auto="0" @change="handleChange">
-                    <mt-swipe-item v-for="(item,idx) in datalist.pictures" :key="idx" :name="idx">
+            <!-- <mt-swipe :auto="0" :show-indicators="false"  ref="mtSwipe" @change="handleChange" style="background:#fff;margin-top:50px;">
+                <mt-swipe-item v-for="(item,idx) in datalist.pictures"  ref="mtItem" :key="idx" name="idx">
+                    <video volume="0.5" v-show="(idx==0)" src="https://img2.ch999img.com/pic/product/opic/20181228143538520.mp4" :poster="datalist.pictures[0]" class="video" style="width: 100%;"></video>
+                    <div data-v-eefe41ba="" class="gesture-mask" v-show="(idx==0)">
+                       <svg data-v-eefe41ba="" viewBox="0 0 1024 1024" width="50" height="50" class="play-btn" style="fill: rgb(255, 255, 255);">
+                           <path data-v-eefe41ba="" d="M512.718 1.549C230.377 1.549 1.494 230.432 1.494 512.774S230.377 1024 512.718 1024s511.224-228.884 511.224-511.226S795.06 1.55 512.718 1.55z m0 971.325c-254.108 0-460.102-205.996-460.102-460.102S258.61 52.67 512.718 52.67 972.82 258.665 972.82 512.772 766.826 972.874 512.718 972.874z m232.06-496.332c-79.556-54.133-223.815-135.157-305.959-185.36-33.678-21.239-61.996-12.71-64.717 24.8-1.971 100.468 0 294.317 0 396.523 1.711 38.08 35.282 43.101 64.419 27.812 82.05-49.71 223.071-135.147 305.536-185.11-0.54-0.327 62.614-35.06 0.72-78.665z" p-id="5260"></path>
+                        </svg>
+                   </div>
+                    <img  :src="datalist.pictures[idx]" width="" height="" class="lazy-img">
+                </mt-swipe-item>                
+            </mt-swipe> -->
+            <div class="swiper-container" id="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" v-for="(item,idx) in datalist.pictures"  ref="mtItem" :key="idx">
                         <video volume="0.5" v-show="(idx==0)" src="https://img2.ch999img.com/pic/product/opic/20181228143538520.mp4" :poster="datalist.pictures[0]" class="video" style="width: 100%;"></video>
                         <div data-v-eefe41ba="" class="gesture-mask" v-show="(idx==0)">
                             <svg data-v-eefe41ba="" viewBox="0 0 1024 1024" width="50" height="50" class="play-btn" style="fill: rgb(255, 255, 255);">
                                 <path data-v-eefe41ba="" d="M512.718 1.549C230.377 1.549 1.494 230.432 1.494 512.774S230.377 1024 512.718 1024s511.224-228.884 511.224-511.226S795.06 1.55 512.718 1.55z m0 971.325c-254.108 0-460.102-205.996-460.102-460.102S258.61 52.67 512.718 52.67 972.82 258.665 972.82 512.772 766.826 972.874 512.718 972.874z m232.06-496.332c-79.556-54.133-223.815-135.157-305.959-185.36-33.678-21.239-61.996-12.71-64.717 24.8-1.971 100.468 0 294.317 0 396.523 1.711 38.08 35.282 43.101 64.419 27.812 82.05-49.71 223.071-135.147 305.536-185.11-0.54-0.327 62.614-35.06 0.72-78.665z" p-id="5260"></path>
                             </svg>
                         </div>
-                        <img  :src="datalist.pictures[idx]"  class="lazy-img">
-                    </mt-swipe-item>
-                </mt-swipe>
+                        <img  :src="datalist.pictures[idx]" width="" height="" class="lazy-img">
+                    </div>
+                <div class="swiper-pagination"></div>
             </div>
+
 
             <!-- 轮播图选择 -->           
             <div data-v-19b06535="" class="flex padding-left padding-right white-bg flex-justify-between" style="padding-top: 2px;">
@@ -31,7 +43,7 @@
                 </div>
 
                 <div data-v-19b06535="" class="product-swipe-page">
-                    <span data-v-19b06535="" class="page-box">{{carIndex+1}}/{{datalist.pictures&&datalist.pictures.length}}</span>
+                    <span data-v-19b06535="" class="page-box">{{carIndex+1}}/10</span>
                 </div>
             </div>
             
@@ -268,7 +280,7 @@
                             <span data-v-c1173c4a="">已</span><span data-v-c1173c4a="">选</span>
                         </div>
                         <div data-v-c1173c4a="" class="module-content flex flex-align-center">
-                            <span data-v-c1173c4a="" class="bold">{{color}} {{g_qty}}件</span>
+                            <span data-v-c1173c4a="" class="bold">{{datalist.skuName}} 1件</span>
                         </div>
                         <div data-v-c1173c4a="" class="module-operation">
                             
@@ -293,9 +305,7 @@
                             </div>
                         </div>
                         <div data-v-c1173c4a="" class="module-operation">
-                             <a data-v-c1173c4a="" href="javascript:" class="grey-9 flex flex-center font-12" @click="showcity=!showcity">
-                                <i data-v-c1173c4a="" class="more ml-5"></i>
-                             </a> 
+                             <a data-v-c1173c4a="" href="javascript:" class="grey-9 flex flex-center font-12"><i data-v-c1173c4a="" class="more ml-5"></i></a> 
                         </div>
                     </div>
                     <div data-v-c1173c4a="" class="module-prompt">
@@ -391,102 +401,7 @@
                 </div>
             </div>
             <!-- 推荐 -->
-            <div data-v-27abcf3c="" class="module-box-wrapper margin-top white-bg">
-                <div data-v-c1173c4a="" data-v-27abcf3c="" class="module-box">
-                    <div data-v-c1173c4a="" class="module-header flex flex-justify-between flex-align-center">
-                        <div data-v-c1173c4a="" class="module-title flex flex-align-center large">
-                            <span data-v-c1173c4a="">推</span><span data-v-c1173c4a="">荐</span><span data-v-c1173c4a="">商</span><span data-v-c1173c4a="">品</span>
-                        </div>
-                        <div data-v-c1173c4a="" class="module-content flex flex-align-center"></div>
-                        <div data-v-c1173c4a="" class="module-operation">
-                            <a data-v-c1173c4a="" href="https://m.9ji.com/product/recommend/parts/2/68436" class="grey-9 flex flex-center font-12"><span data-v-c1173c4a="">查看更多</span></a> <!----> <!---->
-                        </div>
-                    </div>
-                    <div data-v-27abcf3c="" data-v-c1173c4a="" class="white-bg page-list" style="height: 370px;">                        
-                        <div data-v-27abcf3c="" class="mint-swipe grey-active" data-v-c1173c4a="">
-                            <mt-swipe :auto="4000" id="myrecommend">
-                                <mt-swipe-item data-v-27abcf3c="" v-for="(item,idx) in 5" :key="idx">
-                                    <div data-v-27abcf3c="" class="flex flex-wrap">
-                                        <a data-v-27abcf3c="" href="https://m.9ji.com/product/68186" class="guess-item-wrap flex flex-justify-center">
-                                            <div data-v-27abcf3c="" class="guess-item flex flex-col">
-                                                <img data-v-1620e4da="" data-v-27abcf3c=""  src="https://img2.ch999img.com/pic/product/440x440/20181101141815489.jpg.webp" class="lazy-img guess-item-img">
-                                                <p data-v-27abcf3c="" class="guess-item-name grey-6 font-12" style="-webkit-box-orient: vertical;">
-                                                    苹果 iPhone XR 硅胶 定制 保护壳
-                                                </p>
-                                                <p data-v-27abcf3c="" class="guess-item-price font-12 bold">
-                                                    ¥159.00
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a data-v-27abcf3c="" href="https://m.9ji.com/product/68240" class="guess-item-wrap flex flex-justify-center">
-                                            <div data-v-27abcf3c="" class="guess-item flex flex-col">
-                                                <img data-v-1620e4da="" data-v-27abcf3c="" src="https://img2.ch999img.com/pic/product/440x440/20180929105231555.png.webp"  class="lazy-img guess-item-img">
-                                                <p data-v-27abcf3c="" class="guess-item-name grey-6 font-12" style="-webkit-box-orient: vertical;">
-                                                    乐物 iPhone XR 全屏3D钢化膜
-                                                </p>
-                                                <p data-v-27abcf3c="" class="guess-item-price font-12 bold">
-                                                    ¥169.00
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a data-v-27abcf3c="" href="https://m.9ji.com/product/51852" class="guess-item-wrap flex flex-justify-center">
-                                            <div data-v-27abcf3c="" class="guess-item flex flex-col">
-                                                <img data-v-1620e4da="" data-v-27abcf3c="" src="https://img2.ch999img.com/pic/product/440x440/20190318001416621.jpg.webp"  class="lazy-img guess-item-img">
-                                                <p data-v-27abcf3c="" class="guess-item-name grey-6 font-12" style="-webkit-box-orient: vertical;">
-                                                    苹果 AirPods 蓝牙无线耳机
-                                                </p>
-                                                <p data-v-27abcf3c="" class="guess-item-price font-12 bold">
-                                                    ¥1260.00
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a data-v-27abcf3c="" href="https://m.9ji.com/product/74108" class="guess-item-wrap flex flex-justify-center">
-                                            <div data-v-27abcf3c="" class="guess-item flex flex-col">
-                                                <img data-v-1620e4da="" data-v-27abcf3c="" src="https://img2.ch999img.com/pic/product/440x440/2019021514223912.jpg.webp"  class="lazy-img guess-item-img">
-                                                <p data-v-27abcf3c="" class="guess-item-name grey-6 font-12" style="-webkit-box-orient: vertical;">
-                                                    亿觅 苹果lightning挂绳数据线
-                                                </p>
-                                                <p data-v-27abcf3c="" class="guess-item-price font-12 bold">
-                                                    ¥49.00
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a data-v-27abcf3c="" href="https://m.9ji.com/product/62504" class="guess-item-wrap flex flex-justify-center">
-                                            <div data-v-27abcf3c="" class="guess-item flex flex-col">
-                                                <img data-v-1620e4da="" data-v-27abcf3c="" src="https://img2.ch999img.com/pic/product/440x440/20180224183344146.jpg.webp"  class="lazy-img guess-item-img">
-                                                <p data-v-27abcf3c="" class="guess-item-name grey-6 font-12" style="-webkit-box-orient: vertical;">
-                                                    苹果 HomePod 智能音响
-                                                </p>
-                                                <p data-v-27abcf3c="" class="guess-item-price font-12 bold">
-                                                    ¥2699.00
-                                                </p>
-                                            </div>
-                                        </a>
-                                        <a data-v-27abcf3c="" href="https://m.9ji.com/product/67791" class="guess-item-wrap flex flex-justify-center">
-                                            <div data-v-27abcf3c="" class="guess-item flex flex-col">
-                                                <img data-v-1620e4da="" data-v-27abcf3c="" src="https://img2.ch999img.com/pic/product/440x440/20180930114129769.jpg.webp"  class="lazy-img guess-item-img">
-                                                <p data-v-27abcf3c="" class="guess-item-name grey-6 font-12" style="-webkit-box-orient: vertical;">
-                                                    TOTU PD+QC 双口充电器
-                                                </p>
-                                                <p data-v-27abcf3c="" class="guess-item-price font-12 bold">
-                                                    ¥99.00
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </mt-swipe-item>
-                            </mt-swipe>
-                            <div class="mint-swipe-indicators">
-                                <div class="mint-swipe-indicator"></div>
-                                <div class="mint-swipe-indicator"></div>
-                                <div class="mint-swipe-indicator"></div>
-                                <div class="mint-swipe-indicator"></div>
-                                <div class="mint-swipe-indicator"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div style="background:#fff;height:414px;" class="margin-top"></div>
 
             <!-- 评论 -->
             <div data-v-4fdf5edc="" id="comments" class="module-box-wrapper white-bg margin-top">
@@ -505,7 +420,7 @@
                             
                             <div data-v-4fdf5edc="" data-v-c1173c4a="" class="comment-header flex">
                                 <div data-v-4fdf5edc="" data-v-c1173c4a="" class="avatar-box">
-                                    <img data-v-1620e4da="" data-v-4fdf5edc="" src="https://img2.ch999img.com//images/usericon.png.webp"  class="lazy-img" data-v-c1173c4a="">
+                                    <img data-v-1620e4da="" data-v-4fdf5edc="" src="https://img2.ch999img.com//images/usericon.png.webp" width="" height="" class="lazy-img" data-v-c1173c4a="">
                                 </div>
                                 <div data-v-4fdf5edc="" data-v-c1173c4a="" class="flex-child-average padding-left">
                                     <div data-v-4fdf5edc="" data-v-c1173c4a="" class="flex flex-justify-between">
@@ -1354,16 +1269,16 @@
                     <span data-v-1966e491="">购物车</span> 
                     <span data-v-1966e491="" class="cart-number red-bg">4</span>
                 </a> 
-                <a data-v-1966e491="" href="javascript:;" class="btn-big flex-child-average" @click="show">加入购物车</a> 
+                <a data-v-1966e491="" href="javascript:;" class="btn-big flex-child-average">加入购物车</a> 
                 <a data-v-1966e491="" href="javascript:;" class="btn-big flex-child-average red">立即购买</a> 
             </div>
         </div>
 
         <!-- 价格弹窗 -->
-        <popup :change.sync="showpopup" v-show="showpopup" :mylist="mylist" :mysize="mysize" :datalist="datalist" :color.sync="color" :size.sync="size" :relation="relation" :gqty.sync="g_qty"></popup>
+        <popup :change.sync="showpopup" v-show="showpopup" :mylist="mylist" :mysize="mysize"></popup>
 
         <!-- 城市弹窗 -->
-        <div data-v-43fd20d1="" class="full-screen" style="z-index: 9;" v-show="showcity">
+        <div data-v-43fd20d1="" class="full-screen" style="z-index: 9;display:none;">
             <div data-v-43fd20d1="" class="mask"></div>
             <div data-v-43fd20d1="" class="city-child">
                 <div data-v-43fd20d1="" class="wrapper white-bg full-height">
@@ -1373,7 +1288,7 @@
                         </p>
                         <p data-v-43fd20d1="" class="grey-9 font-10">
                             选择您当前的城市
-                        </p><a data-v-43fd20d1="" href="javascript:;" class="close-city" @click="showcity=!showcity">×</a>
+                        </p><a data-v-43fd20d1="" href="javascript:;" class="close-city">×</a>
                     </div>
                     <div data-v-43fd20d1="">
                         
@@ -1390,82 +1305,57 @@
                         </p>
                         <div data-v-43fd20d1="" class="city-tab-box">
                             <div data-v-43fd20d1="" class="city-tab border-bottom flex flex-align-center">
-                                <a data-v-43fd20d1="" href="javascript:;" class="city-tab-item">广东省</a> <a data-v-43fd20d1="" href="javascript:;" class="city-tab-item">广州市</a> 
-                                <a data-v-43fd20d1="" href="javascript:;" class="city-tab-item city-tab-cur">请选择</a>
+                                <a data-v-43fd20d1="" href="javascript:;" class="city-tab-item">广东省</a> <a data-v-43fd20d1="" href="javascript:;" class="city-tab-item">广州市</a> <a data-v-43fd20d1="" href="javascript:;" class="city-tab-item city-tab-cur">请选择</a>
                             </div>
                             <div data-v-43fd20d1="" class="city-item-box" style="height: 225px;">
                                 <div data-v-43fd20d1="" class="flex flex-wrap">
-                                    <a data-v-43fd20d1="" href="javascript:;" data-id="440101" class="city-item flex flex-align-center">
-                                        <p data-v-43fd20d1="" class="lines-1 font-13">
-                                            广州市区
-                                        </p>
-                                    </a>
-                                    <a data-v-43fd20d1="" href="javascript:;" data-id="440103" class="city-item flex flex-align-center">
-                                        <p data-v-43fd20d1="" class="lines-1 font-13">
-                                            荔湾区
-                                        </p>
-                                    </a>
-                                    <a data-v-43fd20d1="" href="javascript:;" data-id="440104" class="city-item flex flex-align-center">
-                                        <p data-v-43fd20d1="" class="lines-1 font-13">
-                                            越秀区
-                                        </p>
-                                    </a>
-                                    <a data-v-43fd20d1="" href="javascript:;" data-id="440105" class="city-item flex flex-align-center">
-                                        <p data-v-43fd20d1="" class="lines-1 font-13">
-                                            海珠区
-                                        </p>
-                                    </a>
-                                    <a data-v-43fd20d1="" href="javascript:;" data-id="440106" class="city-item flex flex-align-center">
-                                        <p data-v-43fd20d1="" class="lines-1 font-13">
-                                            天河区
-                                        </p>
-                                    </a>
-                                    <a data-v-43fd20d1="" href="javascript:;" data-id="440111" class="city-item flex flex-align-center">
-                                        <p data-v-43fd20d1="" class="lines-1 font-13">
-                                            白云区
-                                        </p>
-                                    </a>
-                                    <a data-v-43fd20d1="" href="javascript:;" data-id="440112" class="city-item flex flex-align-center">
-                                        <p data-v-43fd20d1="" class="lines-1 font-13">
-                                            黄埔区
-                                        </p>
-                                    </a>
-                                    <a data-v-43fd20d1="" href="javascript:;" data-id="440113" class="city-item flex flex-align-center">
-                                        <p data-v-43fd20d1="" class="lines-1 font-13">
-                                            番禺区
-                                        </p>
-                                    </a>
-                                    <a data-v-43fd20d1="" href="javascript:;" data-id="440114" class="city-item flex flex-align-center">
-                                        <p data-v-43fd20d1="" class="lines-1 font-13 grey-9">
-                                            花都区
-                                        </p>
-                                    </a>
-                                    <a data-v-43fd20d1="" href="javascript:;" data-id="440115" class="city-item flex flex-align-center">
-                                        <p data-v-43fd20d1="" class="lines-1 font-13">
-                                            南沙区
-                                        </p>
-                                    </a>
-                                    <a data-v-43fd20d1="" href="javascript:;" data-id="440116" class="city-item flex flex-align-center">
-                                        <p data-v-43fd20d1="" class="lines-1 font-13">
-                                            萝岗区
-                                        </p>
-                                    </a>
-                                    <a data-v-43fd20d1="" href="javascript:;" data-id="440183" class="city-item flex flex-align-center">
-                                        <p data-v-43fd20d1="" class="lines-1 font-13">
-                                            增城市
-                                        </p>
-                                    </a>
-                                    <a data-v-43fd20d1="" href="javascript:;" data-id="440184" class="city-item flex flex-align-center">
-                                        <p data-v-43fd20d1="" class="lines-1 font-13">
-                                            从化市
-                                        </p>
-                                    </a>
+                                    <a data-v-43fd20d1="" href="javascript:;" data-id="440101" class="city-item flex flex-align-center"></a>
+                                    <p data-v-43fd20d1="" class="lines-1 font-13">
+                                        广州市区
+                                    </p><a data-v-43fd20d1="" href="javascript:;" data-id="440103" class="city-item flex flex-align-center"></a>
+                                    <p data-v-43fd20d1="" class="lines-1 font-13">
+                                        荔湾区
+                                    </p><a data-v-43fd20d1="" href="javascript:;" data-id="440104" class="city-item flex flex-align-center"></a>
+                                    <p data-v-43fd20d1="" class="lines-1 font-13">
+                                        越秀区
+                                    </p><a data-v-43fd20d1="" href="javascript:;" data-id="440105" class="city-item flex flex-align-center"></a>
+                                    <p data-v-43fd20d1="" class="lines-1 font-13">
+                                        海珠区
+                                    </p><a data-v-43fd20d1="" href="javascript:;" data-id="440106" class="city-item flex flex-align-center"></a>
+                                    <p data-v-43fd20d1="" class="lines-1 font-13">
+                                        天河区
+                                    </p><a data-v-43fd20d1="" href="javascript:;" data-id="440111" class="city-item flex flex-align-center"></a>
+                                    <p data-v-43fd20d1="" class="lines-1 font-13">
+                                        白云区
+                                    </p><a data-v-43fd20d1="" href="javascript:;" data-id="440112" class="city-item flex flex-align-center"></a>
+                                    <p data-v-43fd20d1="" class="lines-1 font-13">
+                                        黄埔区
+                                    </p><a data-v-43fd20d1="" href="javascript:;" data-id="440113" class="city-item flex flex-align-center"></a>
+                                    <p data-v-43fd20d1="" class="lines-1 font-13">
+                                        番禺区
+                                    </p><a data-v-43fd20d1="" href="javascript:;" data-id="440114" class="city-item flex flex-align-center"></a>
+                                    <p data-v-43fd20d1="" class="lines-1 font-13 grey-9">
+                                        花都区
+                                    </p><a data-v-43fd20d1="" href="javascript:;" data-id="440115" class="city-item flex flex-align-center"></a>
+                                    <p data-v-43fd20d1="" class="lines-1 font-13">
+                                        南沙区
+                                    </p><a data-v-43fd20d1="" href="javascript:;" data-id="440116" class="city-item flex flex-align-center"></a>
+                                    <p data-v-43fd20d1="" class="lines-1 font-13">
+                                        萝岗区
+                                    </p><a data-v-43fd20d1="" href="javascript:;" data-id="440183" class="city-item flex flex-align-center"></a>
+                                    <p data-v-43fd20d1="" class="lines-1 font-13">
+                                        增城市
+                                    </p><a data-v-43fd20d1="" href="javascript:;" data-id="440184" class="city-item flex flex-align-center"></a>
+                                    <p data-v-43fd20d1="" class="lines-1 font-13">
+                                        从化市
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </div> 
 
@@ -1497,9 +1387,6 @@ export default{
             size:[],
             currentcolor:0,
             currentsize:0,
-            relation:{},
-            g_qty:1,
-            showcity:false,
         }
     },
     components:{
@@ -1520,7 +1407,7 @@ export default{
         },
         handleChange(index){    //跳转之后获取当前的下标
             this.carIndex = index;//轮播图当前下标
-            // console.log(111)
+            console.log(111)
         },
         switchCar(index)    //自定义跳转，只需要传图片的下标即可
         {
@@ -1531,40 +1418,80 @@ export default{
         //ajax获取数据
         this.$axios.get('http://localhost:5201/goods.php',{
             params:{
-                cid:"4",
-                m:'init'
+                cid:"4"
             }
         }).then(res =>{
             // console.log(res);
             let {data:{list}}= res;
             // console.log(data);
             this.datalist = list[0];
-
             // console.log(this.datalist)
-            // console.log(this.datalist.relation)
-
             this.datalist.pictures = JSON.parse(this.datalist.pictures)
-
             this.sku = JSON.parse(this.datalist.sku)
             this.mylist = this.sku[0].list
             this.mysize = this.sku[1].list
             // console.log(this.mylist[0])
-            this.color = this.mylist[1].value;
-            this.size = this.mysize[0].value;
+            this.color = this.mylist[0].value;
 
-            this.datalist.relation = JSON.parse(this.datalist.relation)
-            this.relation = this.datalist.relation;
         });
 
     },
     mounted(){
-        var mySwiper = new Swiper ('#swiper-container', {
-            autoplay: true,//可选选项，自动滑动
-            initialSlide :2,
-        })
+        var s1 = new Swiper ('#swiper-container',{
+            autoplay:false,
+            loop:true,
+            pagination:{
+                el:'.swiper-pagination'
+            },
+        //				effect:'cube'
+        });
+
+        // var oBox=document.getElementById('swiper-container');
+
+        // oBox.onmouseover=function(){//鼠标经过停止
+        //     s1.autoplay.stop();
+        // }
+
+        // oBox.onmouseout=function(){//鼠标经过离开
+        //     s1.autoplay.start();
+        // }
+
     }
+    
+
+// [
+//     {
+//         "title":"颜色",
+//         "list":[
+//             {"value":"白色","ppid":68396,"diy":"","selected":false,"enable":true,"rank":2,"imagePath":"https://img2.ch999img.com/pic/product/70x70/20180913062755703.jpg"},
+//             {"value":"黑色","ppid":68436,"diy":"","selected":true,"enable":true,"rank":1,"imagePath":"https://img2.ch999img.com/pic/product/70x70/20190308180221753.jpg"},
+//             {"value":"蓝色","ppid":68437,"diy":"","selected":false,"enable":true,"rank":4,"imagePath":"https://img2.ch999img.com/pic/product/70x70/20180913062832472.jpg"},
+//             {"value":"黄色","ppid":68438,"diy":"","selected":false,"enable":true,"rank":6,"imagePath":"https://img2.ch999img.com/pic/product/70x70/20180913062835416.jpg"},
+//             {"value":"珊瑚�?","ppid":68439,"diy":"","selected":false,"enable":true,"rank":5,"imagePath":"https://img2.ch999img.com/pic/product/70x70/20180913062901737.jpg"},
+//             {"value":"红色特别�?","ppid":68440,"diy":"","selected":false,"enable":true,"rank":3,"imagePath":"https://img2.ch999img.com/pic/product/70x70/20180913062905929.jpg"}
+//             ],
+//             "order":2,
+//             "rankTips":"*销量排�?",
+//             "showRankTips":true
+//     },
+//     {
+//         "title":"容量",
+//         "list":[
+//             {"value":"64GB","ppid":68436,"diy":"","selected":true,"enable":true,"rank":1,"imagePath":"https://img2.ch999img.com/pic/product/70x70/20180913062844403.jpg"},
+//             {"value":"128GB","ppid":68442,"diy":"","selected":false,"enable":true,"rank":2,"imagePath":"https://img2.ch999img.com/pic/product/70x70/20180913062828409.jpg"},
+//             {"value":"256GB","ppid":68448,"diy":"","selected":false,"enable":true,"rank":3,"imagePath":"https://img2.ch999img.com/pic/product/70x70/20180913062809643.jpg"}
+//             ],
+//         "order":6,
+//         "rankTips":"*销量排�?",
+//         "showRankTips":true
+//     }
+// ]
+
+
 }
 </script>
+
+<!-- CSS3弹性盒布局方式https://www.jianshu.com/p/5856c4ae91f2 -->
 <style scoped>
     .container{
         display:flex;
@@ -1574,7 +1501,20 @@ export default{
     .container .gcenter{
         flex:1;
     }
-    .mint-swipe img,.video{
+    .swiper-container{
+        width: 100%;
+        height: 4.666666rem;
+    }
+    .swiper-slide{
+        width: 100%;
+        height: 4.666666rem;
+        font-size: 0.666666rem;
+        text-align: center;
+        line-height: 4.666666rem;
+        color: #000;
+    }
+    
+    .swiper-slide img,.video{
         height:349px;
         text-align: center;
     }
@@ -1598,6 +1538,8 @@ export default{
     top:-22px;
     border:none;
 }
+
+
 </style>
 
 

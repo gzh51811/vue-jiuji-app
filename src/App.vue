@@ -1,18 +1,14 @@
 <template>
-  <div>
-      <!-- <shouye></shouye> -->
-      <goods></goods>
-  </div>
+<div class='container'>
+<!-- <search></search> -->
+<router-view></router-view>
+<!-- <footer></footer> -->
+
+</div>
 </template>
 
 <script>
-import shouye from './components/shouye.vue'
-import goods from './pages/goods.vue'
 export default {
-  components:{
-    // shouye,
-    goods
-  }
 }
 </script>
 

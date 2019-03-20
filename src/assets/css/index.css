@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.mint-tabbar{
+    border-top:1px  solid #ccc;
+}
+.btn-o{
+    width: 25%;
+}

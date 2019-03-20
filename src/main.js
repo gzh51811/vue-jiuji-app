@@ -3,8 +3,8 @@ import MintUI from 'mint-ui'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import App from './App.vue';
-
-
+// import "./assets/css/index.css";
+import "./js/rem";
 import router from './router';
 
 import './assets/css/index.css';

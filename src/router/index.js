@@ -15,6 +15,7 @@ import Message from '../pages/Message.vue'
 import Cart from '../pages/Cart.vue'
 import Mine from '../pages/Mine.vue'
 // import NotFound from '../components/NotFound'
+
 import Login from '../pages/Login.vue'
 import register from '../pages/register.vue'
 import setting from '../pages/setting.vue'

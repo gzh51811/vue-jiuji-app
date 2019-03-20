@@ -1531,7 +1531,7 @@ export default{
         //ajax获取数据
         this.$axios.get('http://localhost:5201/goods.php',{
             params:{
-                cid:"3",
+                cid:"4",
                 m:'init'
             }
         }).then(res =>{

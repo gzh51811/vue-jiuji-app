@@ -161,4 +161,5 @@ export default {
     .mint-tab-item-label span{
         color:#000;
     }
+
 </style>

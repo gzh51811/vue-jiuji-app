@@ -2,7 +2,7 @@
 <div  class='cart'>
 <!-- 编辑 -->
 <div class='carttop' style='position:relative;z-index:10'>   
-    <p class='p1'><<i data-v-35aaf6d2="" class="fa fa-angle-left font-30"></i></p>
+    <p class='p1'>&lt;<i data-v-35aaf6d2="" class="fa fa-angle-left font-30"></i></p>
     <p class='p2'>购物车</p>
     <p class='p3'>编辑</p>
 </div>
@@ -179,5 +179,4 @@ export default {
     
 
 }
-
 </style>

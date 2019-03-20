@@ -1,14 +1,15 @@
 <template>
-  <header id="search">
+  <div id="search">
     <mt-search
       v-model="value"
       cancel-text="取消"
       placeholder="搜索"
-      :show="true" class="search" >   
+      :show="true" class="search">
+      <!-- :result.sync="result" -->
+      
     </mt-search>
 
-
-  </header>
+  </div>
 </template>
 
 <script>
@@ -27,6 +28,7 @@ export default {
 </script>
 
 <style >
+
     #search{
       width: 100%;
       display:flex;
@@ -53,6 +55,11 @@ export default {
     .mint-searchbar{
         background: #E61A01;
     }
+
+    .mint-searchbar{
+        background: red;
+
+    }
     .mint-searchbar-inner,.mint-searchbar-core{
         background:darkred;
         border-radius: 25px;
@@ -60,4 +67,5 @@ export default {
     .mint-searchbar-cancel{
         color:white;
     }
+
 </style>

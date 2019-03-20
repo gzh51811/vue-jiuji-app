@@ -1,4 +1,5 @@
 <template>
+
 <div id='jiuji' style="position:relative;">
     <!-- search -->
     <search style='position:fixed;top:0px;z-index:10'></search> 
@@ -16,10 +17,12 @@
     </keep-alive>
      <!-- 底部内容 -->
     <foot ></foot>
+
 </div>
 </template>
 
 <script>
+
 import Vue from 'vue'
 import search from '../components/search.vue'
 import foot from '../components/footer.vue'
@@ -90,6 +93,7 @@ export default {
 
 }
 </script>
+
 
 <style scoped> 
    .currenttab  .mint-tab-item-label{
@@ -170,4 +174,5 @@ export default {
 
 
 </style>
+
 

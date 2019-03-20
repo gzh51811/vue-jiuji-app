@@ -1,6 +1,7 @@
 <template>
 <div>
 ·ÖÀà
+
 <foot></foot>
 </div>
 </template>

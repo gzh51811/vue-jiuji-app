@@ -1529,9 +1529,10 @@ export default{
     },
     created(){
         //ajax获取数据
+        var { cid } = this.$route.params;
         this.$axios.get('http://localhost:5201/goods.php',{
             params:{
-                cid:"4",
+                cid:cid,
                 m:'init'
             }
         }).then(res =>{

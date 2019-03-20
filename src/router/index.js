@@ -49,7 +49,7 @@ let router = new VueRouter({
         },
         {
             name: 'Goods',
-            path: '/goods',
+            path: '/goods/:cid',
             component: Goods
         },
         {

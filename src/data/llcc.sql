@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : mySQL
+Source Server         : localhost_3306
 Source Server Version : 50714
 Source Host           : localhost:3306
 Source Database       : llcc
@@ -10,10 +10,55 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2019-03-17 21:13:04
+Date: 2019-03-21 20:58:56
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for cartlist
+-- ----------------------------
+DROP TABLE IF EXISTS `cartlist`;
+CREATE TABLE `cartlist` (
+  `cid` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `color` varchar(255) DEFAULT NULL,
+  `size` varchar(255) DEFAULT NULL,
+  `qty` int(255) DEFAULT NULL,
+  `price` int(255) DEFAULT NULL,
+  `imgurl` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`cid`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of cartlist
+-- ----------------------------
+INSERT INTO `cartlist` VALUES ('1', '荣耀', '深空灰', '256GB', '8', '1111', 'https://img2.ch999img.com/pic/product/440x440/20181101141815489.jpg');
+INSERT INTO `cartlist` VALUES ('2', 'iPhone XR', '银色', '64GB', '1', '5199', 'https://img2.ch999img.com/pic/product/70x70/20190308180328989.jpg');
+INSERT INTO `cartlist` VALUES ('7', 'Mate 20 X 全网通版', '樱粉�?', '6GB+64GB', '1', '5260', 'https://img2.ch999img.com/pic/product/70x70/20181017144812214.jpg');
+INSERT INTO `cartlist` VALUES ('8', 'iPhone XR', '深空灰色', '64GB', '1', '5299', 'https://img2.ch999img.com/pic/product/70x70/20180802145107132.jpg');
+
+-- ----------------------------
+-- Table structure for user
+-- ----------------------------
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `uid` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `token` varchar(255) DEFAULT NULL,
+  `logintime` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`uid`)
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+INSERT INTO `user` VALUES ('1', '123', '123', '69902547b9796e1657586d9634516ee6', '1553066035');
+INSERT INTO `user` VALUES ('2', '青山贝', '123', '4ee0da251c1ae563ff058ed4742b67d2', '1553071922');
+INSERT INTO `user` VALUES ('3', '臭屁林', '123', '521ac56039753a554ebf7e73d1129a29', '1553257441');
+INSERT INTO `user` VALUES ('4', '咕咕鸡', '123', '9c2deeec58de509369b81749af22f776', '1560757191');
+INSERT INTO `user` VALUES ('5', '思密达', '123', 'd1b78b65485c09d4dfad00bbd9654a2a', '1560763726');
 
 -- ----------------------------
 -- Table structure for v1

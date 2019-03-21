@@ -92,7 +92,7 @@ export default {
   },
   methods: {
     goto(cid) {
-      this.$router.push({ path: "goods/" + cid });
+      this.$router.push({ path: "/goods/" + cid });
     }
   },
   created() {

@@ -140,7 +140,7 @@ export default {
       } else {
         id = 2;
       }
-      this.$router.push({ path: "list/" + id });
+      this.$router.push({ path: "/list/" + id });
     }
   }
 };

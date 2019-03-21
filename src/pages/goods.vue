@@ -1490,10 +1490,8 @@
               <div data-v-2292038c class="params-table-header">售后商品注意事项</div>
               <table data-v-2292038c class="normal-table">
                 <tr data-v-2292038c>
-                  <td
-                    data-v-2292038c
-                    class="argument-only-value"
-                  >一、备用机：手机送修期间九机网将为您免费提供备用机（会视情况收取相应押金，机器归还后全额退还），若备用机出现遗失或损坏情况将按备用机出借协议标识的价值或九机网快修维修价格进行承担。
+                  <td data-v-2292038c class="argument-only-value">
+                    一、备用机：手机送修期间九机网将为您免费提供备用机（会视情况收取相应押金，机器归还后全额退还），若备用机出现遗失或损坏情况将按备用机出借协议标识的价值或九机网快修维修价格进行承担。
                     <br>二、九机代送修流程：涉及厂家质保部分，九机可免费为您代送至厂家售后处理，流程为：
                     <br>故障机器送九机门店→九机送至就近授权服务站点→站点检测维修（或返厂维修）→返回九机门店→通知您取机。
                     <br>三、手机平板送修所需资料：
@@ -1662,11 +1660,11 @@
         </a>
         <a
           data-v-1966e491
-          href="/trade/cart"
+          href="javascript:;"
           class="btn-small flex flex-col flex-justify-center flex-align-center relative border-right"
         >
           <i data-v-1966e491 class="small-icon cart"></i>
-          <span data-v-1966e491>购物车</span>
+          <span data-v-1966e491 @click="goto">购物车</span>
           <span data-v-1966e491 class="cart-number red-bg">4</span>
         </a>
         <a
@@ -1890,6 +1888,9 @@ export default {
     popup
   },
   methods: {
+    goto() {
+      this.$router.push({ path: "/cart" });
+    },
     show() {
       this.showpopup = true;
     },

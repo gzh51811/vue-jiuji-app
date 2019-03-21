@@ -1,20 +1,17 @@
 <template>
-<div>
-·ÖÀà
-
-<foot></foot>
-</div>
+  <div>
+    <foot></foot>
+  </div>
 </template>
 
 <script>
-import foot from '../components/footer.vue'
+import foot from "../components/goodsclassify.vue";
 export default {
-    components:{
-        foot
-    }
-}
+  components: {
+    foot
+  }
+};
 </script>
 
 <style>
-
 </style>

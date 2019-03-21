@@ -23,6 +23,7 @@ import register from '../pages/register.vue'
 import setting from '../pages/setting.vue'
 
 import "../assets/font/iconfont.css"
+import "../assets/css/qsb.css"
 
 import axios from "axios";
 
@@ -30,14 +31,14 @@ Vue.prototype.$axios = axios;
 
 
 Vue.use(VueRouter);
+Vue.prototype.$axios = axios;
 
 let router = new VueRouter({
     // mode:'history',
-
     routes: [
         // 首页:当浏览器地址为path路径是时，自动渲染component对应组件
         {
-            path: '/',   //重定向：当浏览器url地址为/,自动跳转到/home
+            path: '/', //重定向：当浏览器url地址为/,自动跳转到/home
             redirect: 'home'
         },
         {
@@ -47,7 +48,7 @@ let router = new VueRouter({
         },
         {
             name: 'List',
-            path: '/list',
+            path: '/list/:id',
             component: List
         },
         {
@@ -96,7 +97,6 @@ let router = new VueRouter({
 
 // 全局路由守卫
 // 路由拦截：
-
 router.beforeEach((to, from, next) => {
     // console.log('beforeEach',to,from,next)
 
@@ -110,7 +110,9 @@ router.beforeEach((to, from, next) => {
             // 重定向到登录页面
             next({
                 name: 'Login',
-                params: { from: to.fullPath }
+                params: {
+                    from: to.fullPath
+                }
             })
         }
     } else {

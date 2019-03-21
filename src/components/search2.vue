@@ -1,5 +1,5 @@
 <template>
-  <div id="search">
+  <div id="search2">
     <mt-search v-model="value" cancel-text="取消" placeholder="搜索" :show="true" class="search">
       <!-- :result.sync="result" -->
     </mt-search>
@@ -21,55 +21,30 @@ export default {
 };
 </script>
 
-<style scoped>
-#search {
+<style >
+#search2 {
   width: 100%;
+  height: 52px;
   display: flex;
   flex-direction: column;
-  background: #e61a01 !important;
 }
 /*!important*/
-.mint-searchbar-inner {
-  margin-top: 3px;
+#search2 .mint-search-list {
   height: 30px;
 }
-.mint-search-list {
-  height: 30px;
-}
-.mint-tab-item-label {
+#search2.mint-tab-item-label {
   color: #fff;
 }
-
-/* .search{
-      width: 100%;
-      display:flex;
-      flex-direction: column;
-    }*/
-.mint-searchbar {
-  background: #e61a01;
+#search2 .mint-searchbar {
+  width: 375px;
+  background: white;
 }
-
-.mint-searchbar {
-  background: red;
-}
-.mint-searchbar-inner,
+#search2 .mint-searchbar-inner,
 .mint-searchbar-core {
-  background: darkred;
+  background: #ccc;
   border-radius: 25px;
 }
-.mint-searchbar-cancel {
-  color: white;
-}
-
-.mint-searchbar {
-  background: red;
-}
-.mint-searchbar-inner,
-.mint-searchbar-core {
-  background: darkred;
-  border-radius: 25px;
-}
-.mint-searchbar-cancel {
+#search2 .mint-searchbar-cancel {
   color: white;
 }
 </style>

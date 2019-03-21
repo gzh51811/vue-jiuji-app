@@ -53,7 +53,7 @@
     </ul>
     </div>-->
     <div data-v-32d70c04 class="cart">
-      <div data-v-32d70c04 class="cart-item white-bg" v-for="item in cartlist[0]" :key="item">
+      <div data-v-32d70c04 class="cart-item white-bg" v-for="(item,idx) in cartlist[0]" :key="idx">
         <!---->
         <div data-v-32d70c04 class="product">
           <div data-v-32d70c04 class="product-item">
@@ -65,12 +65,8 @@
                 style="border-color: rgb(204, 204, 204);    width: 20px;
     height: 20px;border: 1px solid #000;border-radius:50%"
               ></span>
-              <a data-v-32d70c04 href="/product/68186.html" class="product-img flex-child-noshrink">
-                <img
-                  data-v-32d70c04
-                  src="https://img2.ch999img.com/pic/product/440x440/20181101141815489.jpg"
-                  class="full-width full-height"
-                >
+              <a data-v-32d70c04 href="###" class="product-img flex-child-noshrink">
+                <img data-v-32d70c04 :src="item.imgurl" class="full-width full-height">
                 <!---->
               </a>
               <div

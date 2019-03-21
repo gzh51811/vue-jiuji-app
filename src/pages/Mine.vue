@@ -452,7 +452,7 @@ export default {
         params.append("username", obj.username);
         this.$axios({
           method: "post",
-          url: "http://localhost:5201/src/api/checklogin.php",
+          url: "http://localhost:5201/checklogin.php",
           data: params
         }).then(res => {
           // console.log(res.data.code);

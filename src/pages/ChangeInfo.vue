@@ -35,32 +35,6 @@
               </div>
               <div data-v-2c18a655 class="absolute full-width" style="top: 100%; z-index: -1;"></div>
             </div>
-            <div data-v-2c18a655 class="menu-box flex" style="height: 0px;">
-              <a
-                data-v-2c18a655
-                href="javascript:;"
-                class="flex flex-col flex-center router-link-active"
-              >
-                <i data-v-2c18a655 class="fa fa-home"></i>
-                <span data-v-2c18a655>首页</span>
-              </a>
-              <a data-v-2c18a655 href="javascript:;" class="flex flex-col flex-center">
-                <i data-v-2c18a655 class="fa fa-reorder"></i>
-                <span data-v-2c18a655>分类</span>
-              </a>
-              <a data-v-2c18a655 href="javascript:;" class="flex flex-col flex-center">
-                <i data-v-2c18a655 class="fa fa-shopping-cart"></i>
-                <span data-v-2c18a655>购物车</span>
-              </a>
-              <a
-                data-v-2c18a655
-                href="javascript:;"
-                class="flex flex-col flex-center router-link-active"
-              >
-                <i data-v-2c18a655 class="fa fa-user"></i>
-                <span data-v-2c18a655>我的</span>
-              </a>
-            </div>
           </div>
         </header>
       </div>

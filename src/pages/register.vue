@@ -72,7 +72,7 @@ export default {
           var params = new URLSearchParams();
           params.append("username", telnum); //你要传给后台的参数值 key/value
           params.append("psw", psw);
-          params.append("name", telnum);
+          params.append("nickname", telnum);
           params.append("what", 1);
           this.$axios({
             method: "post",

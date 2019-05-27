@@ -8,7 +8,7 @@ header("Access-Control-Allow-Origin:*");
 $username = isset($_POST['username']) ? $_POST['username'] : '';
 $psw = isset($_POST['psw']) ? $_POST['psw'] : '';
 $what= isset($_POST['what']) ? $_POST['what'] : '';
-// $username = '梁1';
+$name = isset($_POST['name']) ? $_POST['name'] : '';
 // $psw =  '';
 //写查询语句:按需查询数据，每一次只查询一页数据
 
@@ -33,11 +33,12 @@ $what= isset($_POST['what']) ? $_POST['what'] : '';
                 'message'=>'用户名已注册'
             ); 
         }else{
+            $res2 = $conn->query("INSERT INTO user (username,password,name) VALUES('$username','$psw','$name')");
             $good=array(
                 'code'=>'1',
                 'message'=>'注册成功'
             );
-            $res2 = $conn->query("INSERT INTO user (username,password) VALUES('$username','$psw')");
+            
         }
     }  
     

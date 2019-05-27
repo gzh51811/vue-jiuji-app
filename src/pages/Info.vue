@@ -59,6 +59,7 @@
               width
               height
               class="lazy-img avatar flex-child-noshrink"
+              @click="goToChange"
             >
 
             <div data-v-001aa8d4 class="no-login" @click.capture="routergo" v-show="log">
@@ -280,6 +281,9 @@ export default {
   methods: {
     goback() {
       history.go(-1);
+    },
+    goToChange() {
+      this.$router.push({ name: "ChangeInfo" });
     },
     routergo(e) {
       // console.log(e.target.innerHTML);

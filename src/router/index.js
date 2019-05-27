@@ -17,6 +17,7 @@ import Message from '../pages/Message.vue'
 import Cart from '../pages/Cart.vue'
 import Mine from '../pages/Mine.vue'
 import Info from '../pages/Info.vue'
+import ChangeInfo from '../pages/ChangeInfo.vue'
 // import NotFound from '../components/NotFound'
 
 import Login from '../pages/Login.vue'
@@ -96,8 +97,12 @@ let router = new VueRouter({
             name: 'setting',
             path: '/setting',
             component: setting
+        },
+        {
+            name: 'ChangeInfo',
+            path: '/ChangeInfo',
+            component: ChangeInfo
         }
-
     ]
 });
 

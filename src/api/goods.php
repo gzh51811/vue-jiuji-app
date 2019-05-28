@@ -12,6 +12,7 @@
     $g_size = isset($_GET['g_size']) ?  $_GET['g_size'] : '';
     $g_imgurl = isset($_GET['g_imgurl']) ?  $_GET['g_imgurl'] : '';
     $g_price = isset($_GET['g_price']) ?  $_GET['g_price'] : '';
+    $tel = isset($_GET['tel']) ?  $_GET['tel'] : '';
 
 
    
@@ -33,7 +34,7 @@
 
    //加入购物车
    if($m == 'addCar'){
-      $insertCar_sql = "INSERT INTO cartlist(name,color,size,price,qty,imgurl) VALUES('$g_name','$g_color','$g_size','$g_price','$qty','$g_imgurl')";
+      $insertCar_sql = "INSERT INTO cartlist(name,color,size,price,qty,imgurl,tel) VALUES('$g_name','$g_color','$g_size','$g_price','$qty','$g_imgurl','$tel')";
       $insertCar_res = $conn -> query($insertCar_sql);//total
         $data = array(
             'code' => 200,

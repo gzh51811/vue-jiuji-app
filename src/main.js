@@ -4,7 +4,11 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
 
-
+//引入Vant框架
+import Vant from 'vant';
+import 'vant/lib/index.css';
+//使用Vant框架
+Vue.use(Vant);
 
 
 

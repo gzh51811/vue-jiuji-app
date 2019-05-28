@@ -352,7 +352,7 @@ export default {
     },
     created(){
         // console.log('vue',this)
-        this.$axios.get("http://localhost:5201/homerender.php",{
+        this.$axios.get("http://localhost:5201/api/homerender.php",{
         })
         .then(res => {
 

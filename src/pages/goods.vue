@@ -1917,14 +1917,14 @@ export default {
     //ajax获取数据
     var { cid } = this.$route.params;
     this.$axios
-      .get("http://localhost:5201/goods.php", {
+      .get("http://localhost:5201/api/goods.php", {
         params: {
           cid: cid,
           m: "init"
         }
       })
       .then(res => {
-        // console.log(res);
+        console.log(res);
         let {
           data: { list }
         } = res;

@@ -461,7 +461,7 @@ export default {
         }
       }
       this.$axios
-        .get("http://localhost:5201/goodslist.php", {
+        .get("http://localhost:5201/api/goodslist.php", {
           params: {
             id,
             status
@@ -522,7 +522,7 @@ export default {
         }
       }
       this.$axios
-        .get("http://localhost:5201/goodslist.php", {
+        .get("http://localhost:5201/api/goodslist.php", {
           params: {
             id,
             status

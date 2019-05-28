@@ -98,7 +98,7 @@ export default {
   created() {
     var { id } = this.$route.params;
     this.$axios
-      .get("http://localhost:5201/goodslist.php", {
+      .get("http://localhost:5201/api/goodslist.php", {
         params: {
           id,
           status: "initialize"

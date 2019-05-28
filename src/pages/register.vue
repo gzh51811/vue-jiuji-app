@@ -75,7 +75,7 @@ export default {
           params.append("what", 1);
           this.$axios({
             method: "post",
-            url: "http://localhost:5201/register.php",
+            url: "http://localhost:5201/api/register.php",
             data: params
           }).then(res => {
             // console.log(res);
@@ -101,7 +101,7 @@ export default {
       params.append("what", 0);
       this.$axios({
         method: "post",
-        url: "http://localhost:5201/register.php",
+        url: "http://localhost:5201/api/register.php",
         data: params
       }).then(res => {
         // console.log(res);

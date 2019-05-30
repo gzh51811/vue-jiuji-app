@@ -33,11 +33,11 @@ $threemonths = isset($_POST['threemonths']) ? $_POST['threemonths'] : '';
 	$res = $conn->query($sql);	
 	// //获取结果集里面的内容部分
     $row = $res->fetch_all(MYSQLI_ASSOC);//对象格式  [{},{},{}]
-    $nickname = $nickname;
+    // $nickname = $nickname;
         
         
         if($row){
-            $res2 = $conn->query("UPDATE user SET nickname = '$nickname' WHERE username ='$username'");
+            // $res2 = $conn->query("UPDATE user SET nickname = '$nickname' WHERE username ='$username'");
             $good=array(
                 'code'=>'1',
                 // 'list'=>$row,

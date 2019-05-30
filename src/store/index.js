@@ -70,7 +70,7 @@ const store = new Store({
     },
 
     actions: {
-        cartrender(context, payload) {
+        cartrender(context, payload){
             // context ： 类似store的对象
 
             // this.$axios.get('http://localhost:5201/cartlist.php',{

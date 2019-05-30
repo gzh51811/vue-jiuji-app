@@ -353,18 +353,15 @@ export default {
     }
   },
   created() {
-    this.$axios
-      .get("http://localhost:5201/cartlist.php", {
-        params: {}
-      })
-      .then(res => {
-        let {
-          data: { list }
-        } = res;
-        this.$store.dispatch("cartrender", list);
-        if (this.$store.state.cartlist[0].length > 0) {
+
+
+
+        this.$store.dispatch("getcartData");
+        
+        // this.$store.dispatch("cartrender", list);
+        if (this.$store.state.cartlist[0]&&this.$store.state.cartlist[0].length > 0) {
           this.isblock = false;
-        } else if (this.$store.state.cartlist[0].length == 0) {
+        } else if (this.$store.state.cartlist[0]&&this.$store.state.cartlist[0].length == 0) {
           this.isblock = true;
         }
       });

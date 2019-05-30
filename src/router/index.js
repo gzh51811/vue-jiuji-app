@@ -34,7 +34,7 @@ Vue.use(VueRouter);
 Vue.prototype.$axios = axios;
 
 let router = new VueRouter({
-    // mode:'history',
+    mode:'history',
     routes: [
         // 首页:当浏览器地址为path路径是时，自动渲染component对应组件
         {

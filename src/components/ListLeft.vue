@@ -84,7 +84,17 @@ export default {
         probeType: 3 //这个属性设置之后可以监听得到了
       });
 
-      //监听滚动事件
+      
+    },
+
+    //获取右侧每个模块的高度
+    height() {
+      let wrap2 = this.$refs.li2;
+      console.log(this.$refs.li2);
+      let height = 0;
+      this.listHeight.push(height);
+      for (let i = 0; i < wrap2.length; i++) {
+        let item = wra//监听滚动事件
       this.wrapperScroll.on("scroll", pos => {
         // 当允许滚动并滚动的y轴小于0
         if (this.menuIndexChange && pos.y <= 0) {
@@ -106,17 +116,7 @@ export default {
             }
           }
         }
-      });
-    },
-
-    //获取右侧每个模块的高度
-    height() {
-      let wrap2 = this.$refs.li2;
-      console.log(this.$refs.li2);
-      let height = 0;
-      this.listHeight.push(height);
-      for (let i = 0; i < wrap2.length; i++) {
-        let item = wrap2[i];
+      });p2[i];
         height += item.clientHeight;
         this.listHeight.push(height);
       }

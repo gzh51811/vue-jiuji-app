@@ -370,10 +370,11 @@ export default {
     },
     created(){
         console.log('vue',this)
-        this.$axios.get("http://localhost:5201/homerender.php",{
+        this.$axios.get("http://localhost:5201/api/homerender.php",{
         })
         .then(res => {
-
+            // console.log(0);
+            // console.log(res);
             let {data:{list}}=res;
             
             this.homelist=list;

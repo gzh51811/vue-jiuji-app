@@ -16,6 +16,9 @@ import Classify from '../pages/Classify.vue'
 import Message from '../pages/Message.vue'
 import Cart from '../pages/Cart.vue'
 import Mine from '../pages/Mine.vue'
+import Info from '../pages/Info.vue'
+import Search from '../pages/Search.vue'
+import ChangeInfo from '../pages/ChangeInfo.vue'
 // import NotFound from '../components/NotFound'
 
 import Login from '../pages/Login.vue'
@@ -77,6 +80,11 @@ let router = new VueRouter({
             component: Mine
         },
         {
+            name: 'Info',
+            path: '/info',
+            component: Info
+        },
+        {
             name: 'Message',
             path: '/message',
             component: Message
@@ -90,8 +98,17 @@ let router = new VueRouter({
             name: 'setting',
             path: '/setting',
             component: setting
+        },
+        {
+            name: 'ChangeInfo',
+            path: '/ChangeInfo',
+            component: ChangeInfo
+        },
+        {
+            name: 'Search',
+            path: '/search',
+            component: Search
         }
-
     ]
 });
 

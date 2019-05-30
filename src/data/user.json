@@ -1,39 +1,39 @@
 {
-"RECORDS":[
-{
-"uid":1,
-"username":"123",
-"password":"123",
-"token":"69902547b9796e1657586d9634516ee6",
-"logintime":"1553066035"
-},
-{
-"uid":2,
-"username":"青山贝",
-"password":"123",
-"token":"4ee0da251c1ae563ff058ed4742b67d2",
-"logintime":"1553071922"
-},
-{
-"uid":3,
-"username":"臭屁林",
-"password":"123",
-"token":"eb6bd650525e7e9dc3e2637b4e22fdc7",
-"logintime":"1553085025"
-},
-{
-"uid":4,
-"username":"咕咕鸡",
-"password":"123",
-"token":"9c2deeec58de509369b81749af22f776",
-"logintime":"1560757191"
-},
-{
-"uid":5,
-"username":"思密达",
-"password":"123",
-"token":"d1b78b65485c09d4dfad00bbd9654a2a",
-"logintime":"1560763726"
-}
-]
+    "RECORDS": [
+        {
+            "uid": 1,
+            "username": "123",
+            "password": "123",
+            "token": "69902547b9796e1657586d9634516ee6",
+            "logintime": "1553066035"
+        },
+        {
+            "uid": 2,
+            "username": "青山贝",
+            "password": "123",
+            "token": "4ee0da251c1ae563ff058ed4742b67d2",
+            "logintime": "1553071922"
+        },
+        {
+            "uid": 3,
+            "username": "臭屁林",
+            "password": "123",
+            "token": "eb6bd650525e7e9dc3e2637b4e22fdc7",
+            "logintime": "1553085025"
+        },
+        {
+            "uid": 4,
+            "username": "咕咕鸡",
+            "password": "123",
+            "token": "9c2deeec58de509369b81749af22f776",
+            "logintime": "1560757191"
+        },
+        {
+            "uid": 5,
+            "username": "思密达",
+            "password": "123",
+            "token": "d1b78b65485c09d4dfad00bbd9654a2a",
+            "logintime": "1560763726"
+        }
+    ]
 }

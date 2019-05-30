@@ -421,8 +421,10 @@ export default {
     addCar() {
       // console.log('g_name:',this.relation[this.currentrelation].value,'qty:',this.g_qty,'g_color:',this.color,'g_size:',this.size)
       // console.log(mylist[currentcolor].imagePath)
+    var user = JSON.parse(localStorage.getItem("user"));
+    user=user.username;
       this.$axios
-        .get("http://localhost:5201/goods.php", {
+        .get("http://localhost:5201/api/goods.php", {
           params: {
             m: "addCar",
             g_name: this.relation[this.currentrelation].value,
@@ -430,7 +432,8 @@ export default {
             g_color: this.color,
             g_size: this.size,
             g_price: this.price,
-            g_imgurl: this.mylist[this.currentcolor].imagePath
+            g_imgurl: this.mylist[this.currentcolor].imagePath,
+            tel:user
           }
         })
         .then(res => {

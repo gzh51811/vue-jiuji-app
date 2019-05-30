@@ -1,5 +1,5 @@
 <template>
-  <div id="search1">
+  <div id="search1" @click="toSearch">
     <mt-search v-model="value" cancel-text="取消" placeholder="搜索" :show="true" class="search">
       <!-- :result.sync="result" -->
     </mt-search>
@@ -17,6 +17,11 @@ export default {
       value: ""
       //  result:['3333','r']
     };
+  },
+  methods:{
+    toSearch(){
+      this.$router.push('/search')
+    }
   }
 };
 </script>

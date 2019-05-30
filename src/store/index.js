@@ -43,7 +43,11 @@ const store = new Store({
 
         changeCartlist(state, payload) {
             state.cartlist = [];
-            state.cartlist.push(payload);
+            // console.log(payload)
+            // state.cartlist.push(payload);
+            payload.map(function (item) {
+                state.cartlist.push(item);
+            })
         },
 
         // 修改数量
@@ -86,7 +90,7 @@ const store = new Store({
         getcartData(context) {
             // context ： 类似store的对象
             //, payload
-            this._vm.$axios.get('http://localhost:5201/cartlist.php', {
+            this._vm.$axios.get('http://localhost:5201/api/cartlist.php', {
                 params: {
 
                 }
@@ -95,7 +99,18 @@ const store = new Store({
                 context.commit('changeCartlist', data.list);
             })
 
-        }
+        },
+        //删除购物车
+        delcart(context, payload) {
+            this._vm.$axios({
+                method: 'get',
+                url: 'http://localhost:5201/api/cartlistdel.php',
+                params: payload,
+            }).then(res => {
+                // console.log(res);
+                context.commit('changeCartlist', res.data);
+            });
+        },
     }
 });
 

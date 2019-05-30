@@ -1644,7 +1644,7 @@
       <div data-v-1966e491 class="btns-box border-top flex">
         <a
           data-v-1966e491
-          href="https://chat.9ji.com/m/?SourceUrl=https%3A%2F%2Fm.9ji.com%2Fproduct%2F68436.html"
+          href="javascript:;"
           class="btn-small flex flex-col flex-justify-center flex-align-center"
         >
           <i data-v-1966e491 class="small-icon kefu"></i>
@@ -1917,14 +1917,14 @@ export default {
     //ajax获取数据
     var { cid } = this.$route.params;
     this.$axios
-      .get("http://localhost:5201/goods.php", {
+      .get("http://localhost:5201/api/goods.php", {
         params: {
           cid: cid,
           m: "init"
         }
       })
       .then(res => {
-        // console.log(res);
+        console.log(res);
         let {
           data: { list }
         } = res;

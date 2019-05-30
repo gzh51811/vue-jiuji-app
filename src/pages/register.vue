@@ -72,10 +72,11 @@ export default {
           var params = new URLSearchParams();
           params.append("username", telnum); //你要传给后台的参数值 key/value
           params.append("psw", psw);
+          params.append("nickname", telnum);
           params.append("what", 1);
           this.$axios({
             method: "post",
-            url: "http://localhost:5201/register.php",
+            url: "http://localhost:5201/api/register.php",
             data: params
           }).then(res => {
             // console.log(res);
@@ -101,7 +102,7 @@ export default {
       params.append("what", 0);
       this.$axios({
         method: "post",
-        url: "http://localhost:5201/register.php",
+        url: "http://localhost:5201/api/register.php",
         data: params
       }).then(res => {
         // console.log(res);

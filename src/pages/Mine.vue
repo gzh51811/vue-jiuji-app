@@ -75,11 +75,11 @@
         <!---->
         <div data-v-001aa8d4 class="member-box">
           <div data-v-001aa8d4 class="member-info flex flex-align-center">
-            <a data-v-001aa8d4 href="javascript:;">
+            <a data-v-001aa8d4 href="javascript:;" @click="goToInfo">
               <img
                 data-v-1620e4da
                 data-v-001aa8d4
-                src="https://img2.ch999img.com//images/usericon.png.webp"
+                :src="this.iconUrl"
                 width
                 height
                 class="lazy-img avatar"
@@ -344,7 +344,7 @@
               </a>
             </div>
           </div>
-          <div data-v-f0a08906 class="menu-box">
+          <div data-v-f0a08906 class="menu-box" @click="lianxi">
             <div data-v-f0a08906 class="menu-title flex flex-justify-between flex-align-center">
               <h4 data-v-f0a08906 class="font-16">联系我们</h4>
               <!---->
@@ -420,10 +420,14 @@ export default {
   data() {
     return {
       log: true,
-      user: ""
+      user: "",
+      iconUrl: "https://img2.ch999img.com//images/usericon.png.webp"
     };
   },
   methods: {
+    lianxi(){
+      this.$router.push({ name: "Message" });
+    },
     routergo(e) {
       // console.log(e.target.innerHTML);
       if (e.target.innerHTML == "登录") {
@@ -435,11 +439,12 @@ export default {
     },
     gosetting() {
       this.$router.push({ name: "setting" });
+    },
+    goToInfo() {
+      this.$router.push({ name: "Info" });
     }
   },
-  beforeCreate() {
-    // console.log(JSON.parse(localStorage.getItem("user")));
-
+  mounted() {
     var obj = JSON.parse(localStorage.getItem("user"));
     if (obj) {
       var logintime = obj.logintime;
@@ -452,22 +457,23 @@ export default {
         params.append("username", obj.username);
         this.$axios({
           method: "post",
-          url: "http://localhost:5201/checklogin.php",
+          url: "http://localhost:5201/api/checklogin.php",
           data: params
         }).then(res => {
-          // console.log(res.data.code);
           if (res.data.code == 1) {
-            // this.$router.push({ name: "Mine" });
             this.log = false;
             this.user = res.data.username;
+          }
+          if (!this.log) {
+            this.iconUrl =
+              "https://img2.ch999img.com/newstatic/1381/d43534a496b0c8.png.webp";
+          } else {
+            this.iconUrl =
+              "https://img2.ch999img.com//images/usericon.png.webp";
           }
         });
       }
     }
-    // else {
-    //   this.log = true;
-    //   this.user = "";
-    // }
   }
 };
 </script>

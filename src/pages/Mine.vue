@@ -344,7 +344,7 @@
               </a>
             </div>
           </div>
-          <div data-v-f0a08906 class="menu-box">
+          <div data-v-f0a08906 class="menu-box" @click="lianxi">
             <div data-v-f0a08906 class="menu-title flex flex-justify-between flex-align-center">
               <h4 data-v-f0a08906 class="font-16">联系我们</h4>
               <!---->
@@ -425,6 +425,9 @@ export default {
     };
   },
   methods: {
+    lianxi(){
+      this.$router.push({ name: "Message" });
+    },
     routergo(e) {
       // console.log(e.target.innerHTML);
       if (e.target.innerHTML == "登录") {

@@ -17,6 +17,7 @@ import Message from '../pages/Message.vue'
 import Cart from '../pages/Cart.vue'
 import Mine from '../pages/Mine.vue'
 import Info from '../pages/Info.vue'
+import Search from '../pages/Search.vue'
 import ChangeInfo from '../pages/ChangeInfo.vue'
 // import NotFound from '../components/NotFound'
 
@@ -103,6 +104,11 @@ let router = new VueRouter({
             name: 'ChangeInfo',
             path: '/ChangeInfo',
             component: ChangeInfo
+        },
+        {
+            name: 'Search',
+            path: '/search',
+            component: Search
         }
     ]
 });

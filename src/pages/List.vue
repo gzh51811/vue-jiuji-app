@@ -7,7 +7,7 @@
     <div style="width:100%;height:138px"></div>
     <goodlist :goodschange.sync="goods"></goodlist>
   </div>
-</template>
+</template> 
 
 <script>
 import goodlist from "../components/goodlist.vue";

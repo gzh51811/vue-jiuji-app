@@ -1,0 +1,143 @@
+.search-form[data-v-59915c8b] {
+    width: 100%;
+    border-radius: 16px;
+    height: 32px;
+    background-color: #f5f5f5;
+    padding: 0 8px
+}
+
+.search-form i[data-v-59915c8b] {
+    margin-right: 3px
+}
+
+.search-form input[data-v-59915c8b] {
+    width: 100%;
+    height: 30px;
+    line-height: normal;
+    -webkit-flex: 1;
+    flex: 1;
+    outline: none;
+    border: none;
+    background: transparent;
+    box-sizing: border-box;
+    padding-right: 20px
+}
+
+.search-form .clear[data-v-59915c8b] {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAnCAYAAACMo1E1AAAAAXNSR0IArs4c6QAABCpJREFUWAnNWE1IVFEUdt4MZougcNy4aGGCC1sUQkyiqKFFCmGt3FuLVtGisHBp2c8iaCMtbN1OCTSESAdlaFHowo1oLQqNhqTARTLMOH3f457HnTfv5z7H0S68Ofee+51zvjnnvvvue7GafbT5+flEPB7v2tvbG4D5GVyN6kpCbheLxa1YLPYD8otlWbPJZHKhtbU1h7lILRYFnU6n2xHwNmwGIE+Z2oLoDrDvIF91dXV9MLYzAS4tLbXk8/lxELpugg/BzGF+pKenZyUEVxOYOZCJI1vjcHIX/USYM9N5ZLDILKLcd4LK7UsO6+okgr3BdcU0aFQcCGbq6upupFKpn162nuQWFxebUMZZGLR4GR2kDgS/oyr9KPOq228ZOZWxj4dBTMiA4Ddk8II7g5YAKLnGIFjKqmeM8aQh7und3d2p9fX1Y6KjLCGnFn/V1pge2N0HwYubm5svdb1TVrVdrAJUdlci7UUYTUKuYH4Y13ndiUkftsu4JmF7Dnj6cGKLPePgasNeuEydQwQ3wBMYOGMxUHKyu7v7FvuZTOZ1Lpd7C2yvC+M7RMD3tbW119rb2/8StLCwQHGTP3pThJ9Cd5l6u6xq5x/UgXofzp0NkwEYiAF1jF/fTYw43Z/bDgT7QL6PepscFHwk+TbMDyNjxwVgStCLGP3Qn/jykXaVYnyIw0kWBoHPSr9AfiWOitdJwnanoaEhafF0EUaMhsD0kohJBishpmKdyGazlyx17NGJ+/ZNCFZKTILDz1WuuWZRmMgQgo/1u5L+mGm/0ofEa+Ka+wRQWwiwbNorQ25QBcTo6rOFIDzFRm5eGdSdVEiM200jy1qvO43SVwRHvWxQylHOe80Z6upJbtsQXAZTpR0rm4ACa2+M815zhrpfFv7dliG4BKaIOY+kkkkMTDdqt5023uKai0zOixjXGB47jyglQIUEt1jWDXFmIv2Iqe3iIeUBEeRrpTVjQoqYEGL24ve6i/eTQfKyCoVCGkF/hxE0ISY+KiVIPuRl4cUiD6eB2QN4OerOH0LQPkzKn/GQM+TFNcdyTXgAHBXmJ1kaUXBNqTUWuI/5EaQ/8eUlhY9NDsfiDBTTXkDqEIRHa7uZEhO8F0Hdn+BEgscU+XDsnOP/k3eIfCKRONvR0bFWQo4D7FPP8K/usX8UDVl7jneV+xLbyRwVIBYHQd4cR/F6OAdiAyBYEHL2mpOBmhjC2E6r6A9BMt6QTowxS8hRgVv4D+rej+5hEVxjPMZlfL2VkeNkZ2fnV4gUrjmOq9joP6XilYUpWXPuWa7BKn2f48b/AlvGA3cpdQ6B5ASothl+ERgU3X4lyEyjjCOyXQT5MSInDtSXAb6AR/0mzGf3DIhNyAYrPoNkJHLiiC/i2tf0ZmS0EYH5LsIjv3xN5zlxg6cLPsT5rBR7U/kPkD+mmxdMaBMAAAAASUVORK5CYII=) 50% no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    z-index: 2;
+    margin-top: -6px
+}
+
+.search-btn[data-v-59915c8b] {
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px
+}
+
+.search-guess a[data-v-59915c8b] {
+    height: 40px;
+    padding: 0 10px
+}
+
+.search-guess a span[data-v-59915c8b] {
+    margin: 0 10px
+}
+
+.cell-title[data-v-59915c8b] {
+    padding: 15px 10px 0;
+    color: #000;
+    font-weight: 500;
+    font-size: 15px
+}
+
+.hot-search[data-v-59915c8b] {
+    padding: 15px 10px 20px;
+    height: 28px;
+    overflow-y: hidden;
+    white-space: nowrap;
+    overflow-x: auto
+}
+
+.hot-item[data-v-59915c8b] {
+    display: inline-block;
+    padding: 0 10px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    height: 28px;
+    line-height: 26px;
+    font-size: 12px;
+    margin-right: 10px;
+    border: 1px solid #ededed;
+    background: #f5f5f5
+}
+
+.history-item[data-v-59915c8b] {
+    height: 28px;
+    line-height: 28px;
+    border-radius: 14px;
+    background-color: #f5f5f5;
+    margin: 5px;
+    padding: 0 10px;
+    font-size: 12px;
+    min-width: 30px
+}
+
+.clear-btn[data-v-59915c8b] {
+    display: inline-block;
+    height: 14px;
+    font-size: 12px;
+    color: #000;
+    font-weight: 400
+}
+
+.hot-rank[data-v-59915c8b] {
+    padding: 0 10px;
+    margin: 10px 0
+}
+
+.hot-rank .rank-item[data-v-59915c8b] {
+    height: 44px;
+    border-bottom: 1px solid #dfdfdf
+}
+
+.hot-rank .rank-item[data-v-59915c8b]:last-of-type {
+    border-bottom: 0
+}
+
+.hot-rank .rank-item .left-box[data-v-59915c8b] {
+    height: 16px;
+    color: #000;
+    font-weight: 500;
+    padding-right: 8px;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap
+}
+
+.hot-rank .rank-item .left-box .label[data-v-59915c8b] {
+    padding: 0 5px;
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    border-radius: 13px;
+    color: #f21c1c;
+    border: 1px solid #f21c1c;
+    margin-left: 5px
+}
+
+.history[data-v-59915c8b] {
+    padding: 10px
+}
+
+.bold[data-v-59915c8b] {
+    font-weight: 500
+}

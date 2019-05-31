@@ -8,7 +8,7 @@ header("Access-Control-Allow-Origin:*");
 $username = isset($_POST['username']) ? $_POST['username'] : '';
 $psw = isset($_POST['psw']) ? $_POST['psw'] : '';
 $what= isset($_POST['what']) ? $_POST['what'] : '';
-$nickname = isset($_POST['nickname']) ? $_POST['nickname'] : '';
+// $nickname = isset($_POST['nickname']) ? $_POST['nickname'] : '';
 // $psw =  '';
 //写查询语句:按需查询数据，每一次只查询一页数据
 

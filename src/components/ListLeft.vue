@@ -94,7 +94,7 @@ export default {
       let height = 0;
       this.listHeight.push(height);
       for (let i = 0; i < wrap2.length; i++) {
-        let item = wra//监听滚动事件
+        let item = wrap2[i]//监听滚动事件
       this.wrapperScroll.on("scroll", pos => {
         // 当允许滚动并滚动的y轴小于0
         if (this.menuIndexChange && pos.y <= 0) {
@@ -116,7 +116,7 @@ export default {
             }
           }
         }
-      });p2[i];
+      });;
         height += item.clientHeight;
         this.listHeight.push(height);
       }

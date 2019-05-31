@@ -130,7 +130,7 @@ export default {
         } else if (this.$store.state.cartlist[0]&&this.$store.state.cartlist[0].length == 0) {
           this.isblock = true;
         }
-      });
+    
   }
 };
 </script>

@@ -33,7 +33,7 @@ $nickname = isset($_POST['nickname']) ? $_POST['nickname'] : '';
                 'message'=>'用户名已注册'
             ); 
         }else{
-            $res2 = $conn->query("INSERT INTO user (username,password,nickname) VALUES('$username','$psw','$nickname')");
+            $res2 = $conn->query("INSERT INTO user (username,password) VALUES('$username','$psw')");
             $good=array(
                 'code'=>'1',
                 'message'=>'注册成功'

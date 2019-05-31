@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost_3306
+Source Server         : My1811SQL
 Source Server Version : 50714
 Source Host           : localhost:3306
 Source Database       : llcc
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2019-03-21 20:58:56
+Date: 2019-05-31 17:13:30
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -27,16 +27,13 @@ CREATE TABLE `cartlist` (
   `qty` int(255) DEFAULT NULL,
   `price` int(255) DEFAULT NULL,
   `imgurl` varchar(255) DEFAULT NULL,
+  `tel` varchar(255) NOT NULL,
   PRIMARY KEY (`cid`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of cartlist
 -- ----------------------------
-INSERT INTO `cartlist` VALUES ('1', '荣耀', '深空灰', '256GB', '8', '1111', 'https://img2.ch999img.com/pic/product/440x440/20181101141815489.jpg');
-INSERT INTO `cartlist` VALUES ('2', 'iPhone XR', '银色', '64GB', '1', '5199', 'https://img2.ch999img.com/pic/product/70x70/20190308180328989.jpg');
-INSERT INTO `cartlist` VALUES ('7', 'Mate 20 X 全网通版', '樱粉�?', '6GB+64GB', '1', '5260', 'https://img2.ch999img.com/pic/product/70x70/20181017144812214.jpg');
-INSERT INTO `cartlist` VALUES ('8', 'iPhone XR', '深空灰色', '64GB', '1', '5299', 'https://img2.ch999img.com/pic/product/70x70/20180802145107132.jpg');
 
 -- ----------------------------
 -- Table structure for user
@@ -48,17 +45,20 @@ CREATE TABLE `user` (
   `password` varchar(255) NOT NULL,
   `token` varchar(255) DEFAULT NULL,
   `logintime` varchar(255) DEFAULT NULL,
+  `nickname` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`uid`)
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', '123', '123', '69902547b9796e1657586d9634516ee6', '1553066035');
-INSERT INTO `user` VALUES ('2', '青山贝', '123', '4ee0da251c1ae563ff058ed4742b67d2', '1553071922');
-INSERT INTO `user` VALUES ('3', '臭屁林', '123', '521ac56039753a554ebf7e73d1129a29', '1553257441');
-INSERT INTO `user` VALUES ('4', '咕咕鸡', '123', '9c2deeec58de509369b81749af22f776', '1560757191');
-INSERT INTO `user` VALUES ('5', '思密达', '123', 'd1b78b65485c09d4dfad00bbd9654a2a', '1560763726');
+INSERT INTO `user` VALUES ('17', '123', '123', 'f801a4a3545f286f0af7a158dac78e32', '1559359552', null);
+INSERT INTO `user` VALUES ('2', '青山贝', '123', '4ee0da251c1ae563ff058ed4742b67d2', '1553071922', null);
+INSERT INTO `user` VALUES ('3', '臭屁林', '123', '521ac56039753a554ebf7e73d1129a29', '1553257441', null);
+INSERT INTO `user` VALUES ('4', '咕咕鸡', '123', '9c2deeec58de509369b81749af22f776', '1560757191', null);
+INSERT INTO `user` VALUES ('5', '思密达', '123', 'd1b78b65485c09d4dfad00bbd9654a2a', '1560763726', null);
+INSERT INTO `user` VALUES ('15', '12345', '12345', 'e0bb63782fb1c9ad687f8e8f6724a108', '1559297772', null);
+INSERT INTO `user` VALUES ('16', '123456789', '123456789', 'cb142f4d2c14c621d26d5906525b4d2c', '1559356281', null);
 
 -- ----------------------------
 -- Table structure for v1

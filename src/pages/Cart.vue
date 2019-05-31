@@ -1,15 +1,15 @@
 <template>
   <div id="cart">
-    <header>
+    <header style='padding-top:10px'>
       <router-link to="/home">
         <van-icon class="back" name="arrow-left"/>
       </router-link>
-      <span>购物车</span>
+      <span style='padding-left:40%'>购物车</span>
       <span>编辑</span>
     </header>
     <div class="main">
       <div class="one" v-for="(i) in cartlist" :key="i.cid" :name="i.cid">
-        <div>
+        <div style='margin-top:35px'>
           <!-- <input id="input_c" type="checkbox"  v-model="selected" :value="i.id"> -->
           <!-- <van-checkbox v-model="checked"></van-checkbox> -->
           <!-- <van-checkbox v-model="selected" :value="index"></van-checkbox> -->
@@ -19,7 +19,7 @@
           <!-- <img :src="require('../assets/'+i.image)" height="54" width="54" alt> -->
           <img :src="i.imgurl" height="54" width="54" alt>
         </div>
-        <div class="text">
+        <div class="text" style='margin-top:5px'>
           <p class="elli2" v-text="i.name"></p>
           <p>
             <strong class="red">

@@ -99,6 +99,9 @@ export default {
 
 
 <style scoped>
+/deep/ .mint-navbar .mint-tab-item.is-selected{
+    color:#fff !important;
+}
 .currenttab .mint-tab-item-label {
   font-size: 16px !important;
 }

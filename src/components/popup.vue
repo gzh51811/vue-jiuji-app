@@ -296,6 +296,13 @@
         </div>
       </div>
     </div>
+      <!-- 加入成功弹窗 -->
+   <div class='success' v-show='zhanshi' @click='show1'>
+     
+       <div class='success2'>
+            加入成功
+        </div>
+    </div>
   </div>
 </template>
 
@@ -303,6 +310,7 @@
 export default {
   data() {
     return {
+      zhanshi:false,
       currentcolor: 1,
       currentsize: 0,
       currentrelation: 2,
@@ -321,6 +329,10 @@ export default {
     "gqty"
   ],
   methods: {
+    show1(){
+      this.zhanshi=false
+
+    },
     thissize(idx) {
       this.currentsize = idx;
       this.selectprice();
@@ -419,6 +431,8 @@ export default {
       }
     },
     addCar() {
+            this.zhanshi=true;
+
       // console.log('g_name:',this.relation[this.currentrelation].value,'qty:',this.g_qty,'g_color:',this.color,'g_size:',this.size)
       // console.log(mylist[currentcolor].imagePath)
     var user = JSON.parse(localStorage.getItem("user"));
@@ -447,3 +461,32 @@ export default {
   }
 };
 </script>
+<style type="text/css">
+.success{
+  background:rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position:fixed;
+  left: 0px;
+  top:0px;
+  z-index: 11111;
+}
+.success2{
+  position:absolute;
+  background:#fff;
+  border-radius: 5px;
+  border:2px solid red;
+  left: 50%;
+  top: 50%;
+  width: 200px  ;
+  font-size: 18px;
+  color:#000;
+  font-weight: bold;
+  text-align: center;
+  line-height: 100px;
+  height: 100px;
+  transform:translate(-50%,-50%);
+}
+  
+
+</style>

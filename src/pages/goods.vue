@@ -1540,6 +1540,7 @@
           </div>
         </div>
       </div>
+      <!-- -->
 
       <!-- 看看 -->
       <div class="margin-top white-bg padding-top" style="margin-bottom:50px;">
@@ -1850,6 +1851,7 @@
         </div>
       </div>
     </div>
+   
   </div>
 </template>
 <script type="text/javascript">
@@ -1862,6 +1864,7 @@ import "swiper/dist/css/swiper.min.css";
 export default {
   data() {
     return {
+      zhanshi:false,
       banselect: ["视频", "图片", "局部"],
       se_imgurl: [
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAAXNSR0IArs4c6QAAA5VJREFUWAnVmc1PE0EYxt+CscpFYi8tmh4wol6pGA9GvdCYKOBBBa4a03D0BCIXPAAHxYPgVf8AEg7VuxGjEAU/b8bEr0ATJYFAlHpgfJ7ttuy2WLaz23b7Jk/3a96Z30xnZ96ZDYhLU0qFkUUHFIOaLArhfBlatGge58lAIJDCsbIG0CjUD72ANqFSjOnpR/9o2clRSAgah9KQF8Z8mB//FW8NmQahAWgFKocxX+Yf9IQcGYWhl1AljOXwHdE3ZNAKfa8EraUMlteqRQ3HTui3JbNKnrLczv+BB7Z7AAcOXzPQ3u2eV+jeH5RzCsPjQn55BdAAZp96BR3MT1yF6x8osy1/XK+zggCYb+805AdgopFj2uTitWE2aNy5AZ3MPPLNL3nIlbNc90BtOMB/hvblnvrnZBUoh9BNGBaItaVv4dqPwOQkF/kMM1oarcwY4BO0O3Pbl79/QXUYrf0t29K9roBXV0RSS+WuKRuUnLnucVG7xJlnCEgjIgcQlfZ2i3z9op2VA8cMJ7oGY4tSw0u4mJa4rlSdbKlhj1JDg0qtr2VTeHkkZ5jdg9NlbhRxUFt7ko2NwuuREZEjLSKPHoqoTftzd1fk7CA0p2zvbQl9/NpVkRNtIs8ZEXhmxwmNDllGW0DocOa0SPdlr/p7hNBc15XfpqZEjh0VGRoUWV9zU16Te2ilnAOk0yKjo5n+Pjfr3M+e0oDm9F1ZS2ExfnNAt8wQW9qYz3Vz0PZrbtZ1XSb0oq63ll99vUhfn8j9CS138rqHDpQwxLe3i7x5KzLxAGuiBm3oXSTX9Xbs14KJ5s5dkfMXHLsUSWi0NLeqymONjSLj90Q+fPQKmJzzbOkkxHGrhP8ZqYsZ+20iITJ8W2S/p4MTOZN15qJxrhhD0WeRvAk1Hhd59x4v2qTXwMSYzS1yETlxM1DPfv1U6solpc7FlXryWC8P5179JDe6BHxqb+XCJQwqgP/T1zZpcm69fGhtvjG1tRpHLTidj/m0rcdMPgPPNsyhtYO4+xTy04YNw8GzgEaImDEbNG8BPIxD7ezlERo1QtwoXRB3LatpLL/L5LFxMGAqMCTk9moPVC1wlttjchTwFb2BrhKDqvElIFYUbKeH7ONQ7XxzyVYI0LX1dSsLziPga+c7ohXchI+iAgyy2G1K3VJjevppf7EtGKfzAXe6RuEc17m1xpeHcSr3USiGBZxluTKisOUkryHX38b/ASm/YgUgC5Y6AAAAAElFTkSuQmCC",
@@ -1893,6 +1896,11 @@ export default {
     },
     show() {
       this.showpopup = true;
+      // this.zhanshi=true;
+    },
+    show1(){
+      // this.zhanshi=false
+
     },
     thissize(idx) {
       this.currentsize = idx;
@@ -1950,6 +1958,7 @@ export default {
 };
 </script>
 <style scoped>
+
 .container {
   display: flex;
   background: #efefef;

@@ -1,16 +1,17 @@
 <template>
   <div class="container">
-    <div class="g_head">
+    <div class="g_head" style='background:#f8f8f8;height:44px'>
       <i class="iback" @click="gobacklast">
-        <img src="../assets/img/fenxiang.svg">
+        <img src="../assets/img/fenxiang.svg" style='width:24px;height:24px;margin-top:5px'>
       </i>
-      <mt-navbar v-model="selected" class="inav">
+      <mt-navbar v-model="selected" class="inav" style='background:#f8f8f8'>
         <mt-tab-item id="1">
           <span>{{regorlog}}</span>
+          <span style='display:inline-block;line-height:8px'>客服咨询</span>
         </mt-tab-item>
       </mt-navbar>
       <i class="imore" @click="isshow=!isshow">
-        <img src="../assets/img/more.svg">
+        <img src="../assets/img/more.jpg" style='width:24px;height:24px;margin-top:5px'>
       </i>
     </div>
     <transition name="slide">

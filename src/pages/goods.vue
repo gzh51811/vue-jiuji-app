@@ -1666,7 +1666,7 @@
         >
           <i data-v-1966e491 class="small-icon cart"></i>
           <span data-v-1966e491 @click="goto">购物车</span>
-          <span data-v-1966e491 class="cart-number red-bg">4</span>
+          <!-- <span data-v-1966e491 class="cart-number red-bg">4</span> -->
         </a>
         <a
           data-v-1966e491

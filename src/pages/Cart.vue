@@ -15,11 +15,11 @@
           <!-- <van-checkbox v-model="selected" :value="index"></van-checkbox> -->
           <input type="checkbox" class="input_c" @click="select(i.cid)">
         </div>
-        <div class="img">
+        <div class="img" style='margin-top: 10px;'>
           <!-- <img :src="require('../assets/'+i.image)" height="54" width="54" alt> -->
           <img :src="i.imgurl" height="54" width="54" alt>
         </div>
-        <div class="text" style='margin-top:5px'>
+        <div class="text" style='margin-top:15px'>
           <p class="elli2" v-text="i.name"></p>
           <p>
             <strong class="red">
@@ -32,7 +32,7 @@
           <van-icon class="icon" name="delete" @click="delgoods(i.cid)"/>
         </div>
         <div class="num">
-          <van-stepper v-model="i.num"/>
+          <van-stepper v-model="i.num+1"/>
         </div>
       </div>
       <!-- {{selected}} -->
@@ -214,7 +214,7 @@ header span {
 .del {
   position: absolute;
   right: 5%;
-  top: 8%;
+  top: 18%;
 }
 .del .icon {
   font-size: 25px;

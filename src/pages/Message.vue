@@ -1,23 +1,25 @@
 <template>
   <div class="chat div-wrap">
     <goodshead class="myhead"></goodshead>
-      <ul>
+    <div style='height:600px;background:#f8f8f8;overflow:hidden'>
+      <ul style=''>
         <li v-for="(item,index) in dataList" :key="index"
             :class="{'chat-right':item.me,'chat-box':true}">           
             <div :class="{'toright':item.me,'flex':true}">
                 <span class="avater" v-if="!item.me">
-                    <img :src="avater"/>
+                    <img :src="avater1" style='border-radius:50%'/>
                 </span>
-                <span class="content">{{item.content}}</span>
+                <span class="content" style='color:#fff;background-color:#5894F0'> {{item.content}}</span>
                 <span v-if="item.me" class="avater">
-                    <img :src="avater"/>
+                    <img :src="avater"  style='border-radius:50%'/>
                 </span>
             </div>
         </li>
       </ul>
-    <div class="chat-footer">
-      <textarea class="chat-textarea weui-textarea" v-model="content" rows="1"></textarea>
-      <div class="send" @click="sendMessage">{{sendInfo}}</div>
+      </div>
+    <div class="chat-footer" style='background:#fff'>
+      <textarea class="chat-textarea weui-textarea" v-model="content" rows="1" style='line-height:34px'></textarea>
+      <div class="send" @click="sendMessage" style='background:red'>{{sendInfo}}</div>
     </div>
   </div>
 </template>
@@ -30,9 +32,10 @@ import goodshead from "./goodshead.vue";
         content: '',
         sendInfo: "发送",
         dataList: [],
-        autoList: ["你好","在吗","约吗","滚吗"],//这个是关键字
-        answers: ['滚','不在，走开','叔叔我们不约','爱过'],//自动回复的内容
-        avater:'https://img2.ch999img.com/pic/product/440x440/20190520220253592.jpg.webp'//这个是头像
+        autoList: ["你好","在吗","发什么快递","有什么服务"],//这个是关键字
+        answers: ['你好','在，请问有什么需要服务吗','默认发圆通，中通','维修服务，上门收取手机服务，检测服务'],//自动回复的内容
+        avater:'https://img2.ch999img.com/newstatic/1381/d43534a496b0c8.png.webp',//这个是头像
+        avater1:'https://img2.ch999img.com/pic/clientimg/app_servicer1.3.png.webp'
       }
     },
     components: {
@@ -65,7 +68,7 @@ import goodshead from "./goodshead.vue";
                 });
             }else{
                 this.dataList.push({
-                    content: '风太大，我听不见',
+                    content: '你好有什么问题',
                     me:false
                 })    
             }

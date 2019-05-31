@@ -35,7 +35,7 @@ Vue.prototype.$axios = axios;
 
 Vue.use(VueRouter);
 Vue.prototype.$axios = axios;
-
+//路由router
 let router = new VueRouter({
     mode:'history',
     routes: [
@@ -45,33 +45,33 @@ let router = new VueRouter({
             redirect: 'home'
         },
         {
-            name: 'Home',
+            name: 'Home',//首页
             path: '/home',
             component: Home
         },
         {
-            name: 'List',
+            name: 'List',//列表页
             path: '/list/:id',
             component: List
         },
         {
-            name: 'Goods',
+            name: 'Goods',//详情页
             path: '/goods/:cid',
             component: Goods
         },
         {
-            name: 'Classify',
+            name: 'Classify',//分类页
             path: '/classify',
             component: Classify
         },
         {
-            name: 'Cart',
+            name: 'Cart',//购物车
             path: '/cart',
             component: Cart,
             meta: { requiresAuth: true }
         },
         {
-            name: 'Login',
+            name: 'Login',//登录
             path: '/login',
             component: Login
         },
